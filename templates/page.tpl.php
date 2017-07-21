@@ -1,103 +1,76 @@
-<?php
-
-/**
- * @file
- * Default theme implementation to display a single Drupal page.
- *
- * Available variables:
- *
- * General utility variables:
- * - $base_path: The base URL path of the Drupal installation. At the very
- *   least, this will always default to /.
- * - $directory: The directory the template is located in, e.g. modules/system
- *   or themes/bartik.
- * - $is_front: TRUE if the current page is the front page.
- * - $logged_in: TRUE if the user is registered and signed in.
- * - $is_admin: TRUE if the user has permission to access administration pages.
- *
- * Site identity:
- * - $front_page: The URL of the front page. Use this instead of $base_path,
- *   when linking to the front page. This includes the language domain or
- *   prefix.
- * - $logo: The path to the logo image, as defined in theme configuration.
- * - $site_name: The name of the site, empty when display has been disabled
- *   in theme settings.
- * - $site_slogan: The slogan of the site, empty when display has been disabled
- *   in theme settings.
- *
- * Navigation:
- * - $main_menu (array): An array containing the Main menu links for the
- *   site, if they have been configured.
- * - $secondary_menu (array): An array containing the Secondary menu links for
- *   the site, if they have been configured.
- * - $secondary_menu_heading: The title of the menu used by the secondary links.
- * - $breadcrumb: The breadcrumb trail for the current page.
- *
- * Page content (in order of occurrence in the default page.tpl.php):
- * - $title_prefix (array): An array containing additional output populated by
- *   modules, intended to be displayed in front of the main title tag that
- *   appears in the template.
- * - $title: The page title, for use in the actual HTML content.
- * - $title_suffix (array): An array containing additional output populated by
- *   modules, intended to be displayed after the main title tag that appears in
- *   the template.
- * - $messages: HTML for status and error messages. Should be displayed
- *   prominently.
- * - $tabs (array): Tabs linking to any sub-pages beneath the current page
- *   (e.g., the view and edit tabs when displaying a node).
- * - $action_links (array): Actions local to the page, such as 'Add menu' on the
- *   menu administration interface.
- * - $feed_icons: A string of all feed icons for the current page.
- * - $node: The node object, if there is an automatically-loaded node
- *   associated with the page, and the node ID is the second argument
- *   in the page's path (e.g. node/12345 and node/12345/revisions, but not
- *   comment/reply/12345).
- *
- * Regions:
- * - $page['branding']: Items for the branding region.
- * - $page['header']: Items for the header region.
- * - $page['navigation']: Items for the navigation region.
- * - $page['help']: Dynamic help text, mostly for admin pages.
- * - $page['highlighted']: Items for the highlighted content region.
- * - $page['content']: The main content of the current page.
- * - $page['sidebar_first']: Items for the first sidebar.
- * - $page['sidebar_second']: Items for the second sidebar.
- * - $page['footer']: Items for the footer region.
- *
- * @see template_preprocess()
- * @see template_preprocess_page()
- * @see template_process()
- * @see omega_preprocess_page()
- */
-?>
 <div class="l-page">
+<!--______________________topnav______________________-->
   <header class="l-header" role="banner">
-    <div class="l-branding">
-      <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-      <?php endif; ?>
 
-      <?php if ($site_name || $site_slogan): ?>
-        <?php if ($site_name): ?>
-          <h1 class="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-          </h1>
-        <?php endif; ?>
-
-        <?php if ($site_slogan): ?>
-          <h2 class="site-slogan"><?php print $site_slogan; ?></h2>
-        <?php endif; ?>
-      <?php endif; ?>
-
+    <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title">Menu</div>
     </div>
 
-    <?php print render($page['menu_bar']); ?>
-  </header>
+    <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
+      <div class="top-bar-left">
+<!-- logo -->
+<?php $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL)); ?>
+    <a href="www.upei.ca">
+        <img class="site-logo" src="<?php print $theme_path;?>/dist/assets/img/logo.svg">
+    </a>
+<!-- end logo -->
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li>
+            <a href="#">One</a>
+            <ul class="menu vertical">
+              <li><a href="#">One</a></li>
+              <li><a href="#">Two</a></li>
+              <li><a href="#">Three</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </div>
+<div class="top-bar-right">
 
-      <?php print render($page['highlighted']); ?>
-      <?php print render($page['help']); ?>
+<button type="button" class="button" data-toggle="offCanvas">Open Menu</button>
+</div>
+    </div>
+</header>
+<!--++++++++++++++tabs+++++++++++++++++++++ -->
+<div class="searchtabs__container">
+    <div class="searchtabs">
+<ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
+  <li class="tabs-title is-active"><a href="#panel1c" aria-selected="true">Tab 1</a></li>
+  <li class="tabs-title"><a href="#panel2c">Tab 2</a></li>
+  <li class="tabs-title"><a href="#panel3c">Tab 3</a></li>
+  <li class="tabs-title"><a href="#panel4c">Tab 4</a></li>
+</ul>
+
+<div class="tabs-content" data-tabs-content="collapsing-tabs">
+  <div class="tabs-panel is-active" id="panel1c">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+  <div class="tabs-panel" id="panel2c">
+    <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+  </div>
+  <div class="tabs-panel" id="panel3c">
+    <img class="thumbnail" src="assets/img/generic/rectangle-3.jpg">
+  </div>
+  <div class="tabs-panel" id="panel4c">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+</div>
+    </div>
+</div>
+
+<!--______________________messages_____________________________-->
+      <div class="l-messages">
+          <?php print render($page['highlighted']); ?>
+          <?php print $messages; ?>
+      </div>
+<!--______________________content_____________________________-->
+
   <div class="l-main">
-    <div class="l-content" role="main">
+    <div class="l-content " role="main">
+    <div class="content">
       <?php print $breadcrumb; ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
@@ -105,7 +78,6 @@
         <h1><?php print $title; ?></h1>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
       <?php print render($tabs); ?>
       <?php print render($page['help']); ?>
       <?php if ($action_links): ?>
@@ -114,13 +86,18 @@
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
     </div>
+</div>
 
     <?php print render($page['sidebar_first']); ?>
     <?php print render($page['sidebar_second']); ?>
   </div>
-
+<!--______________________sidebar-first_______________________-->
+<!--______________________sidebar-second______________________-->
+<!--______________________footer______________________________-->
   <footer class="l-footer" role="contentinfo">
     <?php print render($page['footer']); ?>
     <?php print render($page['subfooter']); ?>
   </footer>
+<!--______________________subfooter___________________________-->
 </div>
+    <?php print render($page['offcanvas']); ?>
