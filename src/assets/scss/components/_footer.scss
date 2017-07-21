@@ -1,0 +1,35 @@
+//block layout
+.l-region--footer {
+    @include flex-grid-row();
+    > * {
+        //border: 1px solid $white;
+    @include flex-grid-column();
+    }
+
+}
+footer {
+    @include callout;
+    border-radius: 0;
+    background:$black;
+    color:$white;
+
+}
+footer { 
+    .block__title {
+        text-transform: uppercase;
+        font-size: rem-calc(16);
+    }
+    .menu {
+        @include menu-direction(vertical);
+        li {
+            list-style-type: none;
+        }
+        a {
+            color:$white;
+            font-size: rem-calc(12);
+            padding: rem-calc(5) 0;
+        }
+} }
+.l-region--subfooter {
+    background: darken($black, 10%)
+}

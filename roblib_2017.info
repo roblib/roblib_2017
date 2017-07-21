@@ -1,0 +1,37 @@
+name = roblib_2017
+description = Please provide a description for your theme.
+base theme = omega
+screenshot = screenshot.png
+engine = phptemplate
+core = 7.x
+
+; ========================================
+; Stylesheets
+; ========================================
+;stylesheets[all][] = css/roblib-2017.reset.css
+;stylesheets[all][] = css/roblib-2017.styles.css
+stylesheets[all][] = dist/assets/css/app.css
+
+; ========================================
+; Scripts
+; ========================================
+;scripts[] = js/roblib-2017.behaviors.js
+scripts[] = dist/assets/js/app.js
+
+; ========================================
+; FOAD
+; ========================================
+stylesheets[all][] = system.menus.theme.css
+
+; ========================================
+; Regions
+; ========================================
+regions[menu_bar] = Menu Bar
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+regions[footer] = Footer
+regions[subfooter] = Sub Footer
+regions[offcanvas] = Off Canvas

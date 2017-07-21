@@ -1,0 +1,10 @@
+.searchtabs__container {
+    margin-top: $global-margin;
+    @include flex-grid-row();
+    //@include callout;
+    .searchtabs {
+        width:100%;
+    @include callout;
+    }
+    
+}
