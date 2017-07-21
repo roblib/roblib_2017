@@ -65,6 +65,7 @@
       <div class="l-messages">
           <?php print render($page['highlighted']); ?>
           <?php print $messages; ?>
+      <?php print render($page['help']); ?>
       </div>
 <!--______________________content_____________________________-->
 
@@ -79,7 +80,6 @@
       <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php print render($tabs); ?>
-      <?php print render($page['help']); ?>
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
