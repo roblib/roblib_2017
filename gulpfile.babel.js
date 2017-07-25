@@ -20,7 +20,7 @@ const $ = plugins();
 const PRODUCTION = !!(yargs.argv.production);
 
 // Load settings from settings.yml
-const { COMPATIBILITY, PORT, PROXY, UNCSS_OPTIONS, PATHS } = loadConfig();
+const { THEMENAME, COMPATIBILITY, PORT, PROXY, UNCSS_OPTIONS, PATHS } = loadConfig();
 
 function loadConfig() {
   let ymlFile = fs.readFileSync('config.yml', 'utf8');
@@ -30,6 +30,10 @@ function loadConfig() {
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
  gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
+
+// Build the site, run the server, and watch for file changes
+gulp.task('brute',
+  gulp.series('build', serverRemote, watch));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -138,6 +142,38 @@ function server(done) {
         proxy         : PROXY,
         port          : PORT,
         injectChanges : true
+    });
+    done();
+}
+
+// Start a proxy server with Browsersync + regex file swapping
+
+function serverRemote(done) {
+
+    const findCss = new RegExp("<link.*" + THEMENAME + "*\/dist\/assets\/css\/app.*", "g");
+    const findJs = new RegExp("<script.*" + THEMENAME + "*\/dist\/assets\/js\/app.*", "g");
+
+    browser.init({
+
+        proxy: PROXY,
+        serveStatic: ["dist/assets"],
+        files: "dist/assets/css/app.css",
+        rewriteRules: [
+            {
+                match: findCss,
+                fn: function (req, res, match) {
+                    return '<link rel="stylesheet" type="text/css" href="/css/app.css"/>';
+                }
+            },
+            {
+                match: /<script.*roblib_2017*\/dist\/assets\/js\/app.*/g,
+                fn: function (req, res, match) {
+                    return '<script src="/js/app.js"></script>';
+                }
+            }
+        ]
+
+
     });
     done();
 }
