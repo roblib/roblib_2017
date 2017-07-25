@@ -1,35 +1,42 @@
 //block layout
-.l-region--footer {
-    @include flex-grid-row();
-    > * {
-        //border: 1px solid $white;
-    @include flex-grid-column();
-    }
-
-}
-footer {
+.footer { 
     @include callout;
-    border-radius: 0;
-    background:$black;
-    color:$white;
-
-}
-footer { 
+    border-radius:0;
+    background: $black;
+    border-bottom:4px solid $primary-color;
+    margin-bottom:0;
     .block__title {
+        color:$white;
         text-transform: uppercase;
         font-size: rem-calc(16);
     }
-    .menu {
-        @include menu-direction(vertical);
-        li {
-            list-style-type: none;
-        }
-        a {
-            color:$white;
-            font-size: rem-calc(12);
-            padding: rem-calc(5) 0;
-        }
-} }
-.l-region--subfooter {
+}
+footer .container {
+    @include flex-grid-row();
+    > * {
+        //border: 1px solid $white;
+        @include flex-grid-column();
+    }
+
+}
+.footer .menu {
+    @include menu-direction(vertical);
+    li {
+        list-style-type: none;
+    }
+    a {
+        color:$white;
+        font-size: rem-calc(12);
+        padding: rem-calc(5) 0;
+    }
+}
+//footer {
+//@include callout;
+//border-radius: 0;
+//background:$black;
+//color:$white;
+
+//}
+.subfooter {
     background: darken($black, 10%)
 }

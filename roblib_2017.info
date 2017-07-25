@@ -26,7 +26,8 @@ stylesheets[all][] = system.menus.theme.css
 ; ========================================
 ; Regions
 ; ========================================
-regions[menu_bar] = Menu Bar
+regions[menu_bar_center] = Menu Bar Center
+regions[menu_bar_right] = Menu Bar Right
 regions[highlighted] = Highlighted
 regions[help] = Help
 regions[content] = Content
