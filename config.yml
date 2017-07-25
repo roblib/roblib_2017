@@ -1,5 +1,6 @@
 # Your project's server will run on localhost:xxxx at this port
 PORT: 8000
+PROXY: "librarytest.upei.ca"
 
 # Autoprefixer will make sure your CSS works with these browsers
 COMPATIBILITY:

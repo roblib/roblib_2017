@@ -20,7 +20,7 @@ const $ = plugins();
 const PRODUCTION = !!(yargs.argv.production);
 
 // Load settings from settings.yml
-const { COMPATIBILITY, PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
+const { COMPATIBILITY, PORT, PROXY, UNCSS_OPTIONS, PATHS } = loadConfig();
 
 function loadConfig() {
   let ymlFile = fs.readFileSync('config.yml', 'utf8');
@@ -135,7 +135,8 @@ function images() {
 function server(done) {
     browser.init({
         //server: PATHS.dist, port: PORT
-        proxy: "drupalvm.dev",
+        proxy         : PROXY,
+        port          : PORT,
         injectChanges : true
     });
     done();
