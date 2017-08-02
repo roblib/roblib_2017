@@ -71,18 +71,18 @@ $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #8C2004,
   secondary: #767676,
-  success: #3adb76,
+  success: #5B8C1F,
   warning: #ffae00,
   alert: #cc4b37,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #EAEAE8;
-$dark-gray: #8a8a8a;
+$light-gray: #E0E0E0;
+$medium-gray: #C0C0C0;
+$dark-gray: #A0A0A0;
 $black: #333;
 $green: #5B8C1F;
 $red: #8C2004;
 $white: #fefefe;
-$body-background: $medium-gray;
+$body-background: $light-gray;
 $body-font-color: $black;
 $body-font-family: $roboto;
 $body-antialiased: true;
@@ -789,13 +789,14 @@ $table-stack-breakpoint: medium;
 // --------
 
 $tab-margin: 0;
-$tab-background: $white;
+$tab-background: $dark-gray;
+$tab-container-background: $dark-gray;
 $tab-color: $primary-color;
-$tab-background-active: $light-gray;
+$tab-background-active: $white;
 $tab-active-color: $primary-color;
-$tab-item-font-size: rem-calc(12);
+$tab-item-font-size: 1rem;
 $tab-item-background-hover: $white;
-$tab-item-padding: 1.25rem 1.5rem;
+$tab-item-padding: .8rem 1.5rem;
 $tab-expand-max: 6;
 $tab-content-background: $white;
 $tab-content-border: $light-gray;
