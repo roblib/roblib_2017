@@ -35,7 +35,7 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 <!--______________________messages_____________________________-->
 <div class="l-messages">
 	<?php print render($page['highlighted']); ?>
-	<?php //print $messages; ?>
+	<?php print $messages; ?>
 	<?php print render($page['help']); ?>
 </div>
 <!--______________________content_____________________________-->
@@ -45,7 +45,7 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 		<div class="landing-page__content">
 			<a id="main-content"></a>
 
-		  <button class="button admin-menu__button" type="button" data-toggle="admin-dropdown">admin</button>
+		  <button class="button admin-menu__button" type="button" data-toggle="admin-dropdown"></button>
 <div class="dropdown-pane admin-menu__dropdown" id="admin-dropdown" data-position="bottom" data-alignment="right"  data-dropdown data-auto-focus="true">
  <?php print render($tabs); ?>
 </div> 

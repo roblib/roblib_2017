@@ -82,61 +82,19 @@
 <?php
 hide($content['comments']);
 hide($content['links']);
+//hide($content['field_search_tabs']);
+hide($content['field_subject_librarians']);
 print render($content);
 ?>
 <!--===================== Help me =========================-->
 
-<div class="row callout">
+<section class="help-me">
+<div class="left">
+	<?php print render($content['field_subject_librarians']);?>
+</div>
+<div class="right">
 
-	<div class="column lp-help-block medium-9">
-
-<section class="four-up-feature">
-  <!--<div class="row four-up-feature-header align-center">-->
-  <div class="row four-up-feature-header ">
-    <div class="medium-8 columns">
-      <h2>Help me get started...</h2>
-	  <ul>
-		  <li>
-		  <h4>
-			  important list item important list item
-		  </h4>
-		  </li>
-		  <li>
-		  <h4>
-			  important list item important list item
-		  </h4>
-		  </li>
-	  </ul>
-    </div>
-  </div>
-  <div class="row align-spaced">
-    <div class="small-10 medium-3 columns">
-      <img class="four-up-feature-image" src="http://placehold.it/75" alt="icon">
-      <h4>Librarian Name</h4>
-      <p class="four-up-feature-text">Subject area and description</p>
-    </div>
-    <div class="small-10 medium-3 columns">
-      <img class="four-up-feature-image" src="http://placehold.it/75" alt="icon">
-      <h4>Librarian Name</h4>
-      <p class="four-up-feature-text">Subject area and description</p>
-    </div>
-    <div class="small-10 medium-3 columns">
-      <img class="four-up-feature-image" src="http://placehold.it/75" alt="icon">
-      <h4>Librarian Name</h4>
-      <p class="four-up-feature-text">Subject area and description</p>
-    </div>
-    <div class="small-10 medium-3 columns">
-      <img class="four-up-feature-image" src="http://placehold.it/75" alt="icon">
-      <h4>Librarian Name</h4>
-      <p class="four-up-feature-text">Subject area and description</p>
-    </div>
-  </div>
-</section>
-
-
-
-	</div>
-	<div class="column lp-askus-block medium-3">
+	<div class="lp-askus-block">
 
 		<!-- Place this div in your web page where you want your chat widget to appear. -->
 		<div class="needs-js">
@@ -149,17 +107,20 @@ print render($content);
 			</div>
 		</div>
 		<!-- Place this script as near to the end of your BODY as possible. --><script type="text/javascript">
-(function() {
- var x = document.createElement("script"); x.type = "text/javascript"; x.async = true;
- x.src = (document.location.protocol === "https:" ? "https://" : "http://") + "ca.libraryh3lp.com/js/libraryh3lp.js?5343";
- var y = document.getElementsByTagName("script")[0]; y.parentNode.insertBefore(x, y);
- })();
-		</script>
+		(function() {
+			var x = document.createElement("script"); x.type = "text/javascript"; x.async = true;
+			x.src = (document.location.protocol === "https:" ? "https://" : "http://") + "ca.libraryh3lp.com/js/libraryh3lp.js?5343";
+			var y = document.getElementsByTagName("script")[0]; y.parentNode.insertBefore(x, y);
+		})();
+</script>
 
 
 
 	</div>
+
 </div>
+</section>
+
 
 <!--===================== news =========================-->
 <div class="row">
