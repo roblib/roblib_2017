@@ -1,6 +1,6 @@
 .admin-menu {
     &__button {
-
+@include hamburger($white);
     }
     &__dropdown {
         background:#fff;
