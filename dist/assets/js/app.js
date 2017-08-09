@@ -22286,6 +22286,23 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
    *   Drupal.settings directly you should use this because of potential
    *   modifications made by the Ajax callback that also produced 'context'.
    */
+  Drupal.behaviors.bentoSearch = {
+    attach: function attach(context, settings) {
+
+      //$('#roblib-eds-books-toc a').hide();
+      //$('.js-search-results__container .books').hide();
+      $('.js-search-results__container .books').append($('#roblib-eds-books-toc'));
+      $('.js-search-results__container .articles').append($('#roblib-eds-articles-toc'));
+      $('.js-search-results__container .web').append($('#roblib-solr-search-toc-results'));
+
+      //$('#roblib-eds-books-toc a').hide();
+      //$('.js-search-results__container .books', context).once('bento', function () {
+
+      //$('#roblib-eds-books-toc a').hide();
+
+      //});
+    }
+  };
   Drupal.behaviors.roblib2017ExampleBehavior = {
     attach: function attach(context, settings) {
       // By using the 'context' variable we make sure that our code only runs on

@@ -1,0 +1,70 @@
+.roblib_search {
+    .form-type-textfield { 
+        width:100%;
+    }
+    label {
+        display:none;
+    }
+    .form-wrapper {
+        @extend .input-group;
+    }
+    input[type="text"] {
+
+        @extend .input-group-field;
+        //@include button();
+        border-radius: $global-radius 0 0 $global-radius;
+    }
+    input[type="submit"] {
+        @extend .input-group-button;
+        @include button();
+        @include button-style(
+        //$background, 
+        $success-color,
+        //$background-hover, 
+        auto,
+        //$color
+        auto
+        );
+        border-radius: 0 $global-radius $global-radius 0;
+    }
+}
+
+.js-search-results__container {
+    $text_size: 14; 
+    label {
+        float:left;
+        font-size: rem-calc($text_size);
+    }
+    .search-results { 
+        @include menu-base();
+        a {
+            @include padding(0, 0, 0, .5);
+            font-size: rem-calc($text_size);
+            line-height:1.8;
+
+            &:after {
+                content: ',';
+            }
+
+        }
+        li:last-child a:after {
+            content:none;
+        }
+    }
+}
+.roblib-eds-more-button,
+.roblib-solr-more-button {
+    a {
+        @include button();
+        @include button-style(
+        //$background, 
+        $success-color,
+        //$background-hover, 
+        auto,
+        //$color
+        auto
+        )
+        @include button-expand(true);
+        @include margin(1);
+    }
+}
