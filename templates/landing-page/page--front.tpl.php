@@ -35,8 +35,10 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 <!--______________________messages_____________________________-->
 <div class="l-messages">
 	<?php print render($page['highlighted']); ?>
+<!--
 	<?php print $messages; ?>
 	<?php print render($page['help']); ?>
+-->
 </div>
 <!--______________________content_____________________________-->
 

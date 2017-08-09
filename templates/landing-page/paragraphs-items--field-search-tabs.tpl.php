@@ -37,6 +37,7 @@ $tab4 = $variables['element'][3]['entity']['paragraphs_item'][4];
  */
 ?>
 
+ <?php print render($tabs); ?>
 <div class="searchtabs__container">
     <div class="searchtabs">
 		<ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
