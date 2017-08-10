@@ -12,7 +12,7 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
         <div class="top-bar-left">
 
 					<!-- logo -->
-					<a href="www.upei.ca">
+					<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
 <img class="site-logo" src="http://librarytest.upei.ca/sites/librarytest.upei.ca/themes/themes/roblib_2017/dist/assets/img/logo.svg">
 					</a>
 					<!-- end logo -->
