@@ -68,3 +68,15 @@
         @include margin(1);
     }
 }
+.not-included {
+    h2 {
+            background: #333;
+                padding-left: 5px;
+                    border-left: solid;
+                    border-color: $success-color;
+                        color: white;
+    }
+    p {
+        margin-left: $global-margin/2;
+    }
+}
