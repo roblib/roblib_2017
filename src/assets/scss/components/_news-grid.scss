@@ -1,0 +1,21 @@
+.news-grid .view-content {
+    @include flex-grid-row(
+    null, $grid-row-width, null, true, 1em
+    );
+    @include flex-grid-layout(2, '.views-row');
+
+    .views-row-odd {
+        padding-right:$global-margin;
+    }
+    .views-row-even {
+        padding-left:$global-margin;
+    }
+
+}
+.news-grid__tile {
+    height: rem-calc(177);
+    a {
+float:right;        //@include button();
+        //padding:0;
+    }
+}
