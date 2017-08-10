@@ -10,4 +10,9 @@
         }
 
     }
+    @at-root {
+    }
 }
+.not-logged-in .admin-menu__button {
+            display: none;
+        }
