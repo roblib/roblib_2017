@@ -124,67 +124,10 @@ print render($content);
 
 <!--===================== news =========================-->
 <div class="row">
-	<div class="column lp-button-block medium-6">
-		<div class="expanded button-group">
-			<a class="button success">Interlibrary Loan</a>
-			<a class="button success">Reserves</a>
+		<div class="lp-button-block column expanded button-group">
+			<a class="button success" href="/ill">Interlibrary Loan</a>
+			<a class="button success" href="http://proxy.library.upei.ca/login?url=http://library.upei.ca/reserves">Reserves</a>
+			<a class="button success" href="/refworks">RefWorks</a>
+			<a class="button success" href="/grammarly">Grammarly</a>
 		</div>
-		<div class="expanded button-group">
-			<a class="button success">RefWorks</a>
-			<a class="button success">Grammarly</a>
-		</div>
-	</div>
-	<div class="column medium-6 lp-news-block">
-
-		<div class="callout news media-object">
-			<div class="media-object-section">
-				<div class="thumbnail">
-					<img src="http://via.placeholder.com/100x100">
-				</div>
-			</div>
-			<div class="media-object-section">
-				<h4>Library News</h4>
-				<ul>
-					<li>
-					library news item library news item
-					</li>
-					<li>
-					library news item library news item
-					</li>
-					<li>
-					library news item library news item
-					</li>
-					<li>
-					library news item library news item
-					</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="callout events media-object">
-			<div class="media-object-section">
-				<div class="thumbnail">
-					<img src="http://via.placeholder.com/100x100">
-				</div>
-			</div>
-			<div class="media-object-section">
-				<h4>Library Events</h4>
-
-				<ul>
-					<li>
-					library news item library news item
-					</li>
-					<li>
-					library news item library news item
-					</li>
-					<li>
-					library news item library news item
-					</li>
-					<li>
-					library news item library news item
-					</li>
-				</ul>
-			</div>
-		</div>
-
-	</div>
+</div>

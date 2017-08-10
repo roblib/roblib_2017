@@ -46,11 +46,12 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 	<div class="l-content " role="main">
 		<div class="landing-page__content">
 			<a id="main-content"></a>
-
+<?php if ($tabs): ?>
 		  <button class="button admin-menu__button" type="button" data-toggle="admin-dropdown"></button>
 <div class="dropdown-pane admin-menu__dropdown" id="admin-dropdown" data-position="bottom" data-alignment="right"  data-dropdown data-auto-focus="true">
  <?php print render($tabs); ?>
 </div> 
+<?php endif; ?>
 			<?php print render($page['content']); ?>
 		</div>
 	</div>

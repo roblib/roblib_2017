@@ -13,7 +13,7 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 
 					<!-- logo -->
 					<a href="www.upei.ca">
-						<img class="site-logo" src="<?php print $theme_path;?>/dist/assets/img/logo.svg">
+<img class="site-logo" src="http://librarytest.upei.ca/sites/librarytest.upei.ca/themes/themes/roblib_2017/dist/assets/img/logo.svg">
 					</a>
 					<!-- end logo -->
 			<!--<ul class="branding">-->
@@ -54,7 +54,7 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 <!--______________________messages_____________________________-->
 <div class="l-messages">
     <?php print render($page['highlighted']); ?>
-    <?php print $messages; ?>
+    <?php //print $messages; ?>
     <?php print render($page['help']); ?>
 </div>
 <!--______________________content_____________________________-->
@@ -69,10 +69,12 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
             <h1><?php print $title; ?></h1>
             <?php endif; ?>
             <?php print render($title_suffix); ?>
-		  <button class="button" type="button" data-toggle="admin-dropdown">admin</button>
+<?php if ($tabs): ?>
+		  <button class="button admin-menu__button" type="button" data-toggle="admin-dropdown"></button>
 <div class="dropdown-pane admin-menu__dropdown" id="admin-dropdown" data-position="bottom" data-alignment="right"  data-dropdown data-auto-focus="true">
  <?php print render($tabs); ?>
 </div> 
+<?php endif; ?>
 
             <?php if ($action_links): ?>
             <ul class="action-links"><?php print render($action_links); ?></ul>
