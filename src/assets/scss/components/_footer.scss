@@ -8,28 +8,60 @@
     .block .title {
         color:$white;
         //text-transform: uppercase;
-        font-size: rem-calc(18);
+        font-size: rem-calc(20);
         font-weight:600;
         margin-top: $global-margin;
     }
 }
-footer .container {
+.footer .container {
     @include flex-grid-row();
     > * {
-        //border: 1px solid $white;
         @include flex-grid-column();
     }
 
 }
+.subfooter .container {
+    @include flex-grid-row();
+    //> * {
+    .subfooter-left {
+        //border: 1px solid $white;
+        @include flex-grid-column(8);
+    }
+    .subfooter-right {
+        //border: 1px solid $white;
+        @include flex-grid-column(4);
+    }
+        ////border: 1px solid $white;
+        //@include flex-grid-column();
+    //}
+
+}
 .footer-links {
-    border-left: 1px solid #ccc;
-    padding-left: $global-padding;
+    border-left: 1px solid #676767;
+    padding-left: $global-padding/2;
+    .social-media {
+    @include menu-direction(horizontal);
+        .fa {
+            font-size:2rem;
+            padding-right: $global-padding;
+        }
+    }
 }
 .footer .menu {
     @include menu-direction(vertical);
+    &.social-media {
+    @include menu-direction(horizontal);
+        .fa {
+            font-size:2rem;
+        }
+    }
     li {
         list-style-type: none;
         color:#ccc;
+       > * {
+                display: inline-block;
+
+        }
     }
     a {
 
@@ -46,8 +78,48 @@ footer .container {
 
 //}
 .subfooter {
-    background: darken($black, 10%)
+    background: darken($black, 10%);
+    padding-top: $global-padding;
+    padding-bottom: $global-padding;
 }
 body {
     //display:none !important;
+}
+.footeraddress {
+    .address {
+            color: white;
+                font-size: .8em;
+                    padding-bottom: 5px;
+    }
+    .links-last {
+            color: #a8a9a7;
+                display: flex;
+
+    }
+    .links-last a {
+            color: #ccc;
+                font-size: .8em;
+                    line-height: 2;
+                        padding: 0 4px;
+
+    }
+    .links-last a:first-child {
+            color: #ccc;
+                font-size: .8em;
+                    padding-left: 0px;
+
+    }
+}
+.socialmedia ul {
+    @include menu-base();
+    a {
+        padding: 0;
+        padding-right:.5rem;
+    }
+}
+div#address_right {
+        display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
 }
