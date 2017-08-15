@@ -5,6 +5,7 @@
 
 .tb-megamenu {
   background-color: #333;
+  font-family:$roboto-condensed;
 }
 .tb-megamenu:before,
 .tb-megamenu:after {
@@ -1654,7 +1655,7 @@
 
 	.sub {
 		width: 1120px;
-        transform: translateX(-180px);
+        //transform: translateX(-180px);
 	}
 
 .sub tbody {
@@ -1690,6 +1691,7 @@
 .dropdown-panel-title {
 	border-bottom: 1px solid #ccc;
 	margin-top: 10px;
+    font-family:$lusitana !important;
 }
 
 .tb-megamenu .dropdown-menu a {
@@ -1752,6 +1754,11 @@
 }
 .megamenu .panel-pane {
     border:0;
+    margin:0;
+                line-height: 1.5em;
+                margin:10px; 
+                border-bottom:1px solid #cecfcc;
+            
 }
 .megamenu ul {
     background-color:$white;
@@ -1916,3 +1923,22 @@ div#block-panels-mini-databases {
         border: none !important;
     }
 }
+.tb-megamenu li a {
+    font-family:$roboto-condensed !important;
+}
+.tb-megamenu { 
+    table thead, table tbody, table tfoot {
+        background: none;
+    }
+    .block__title, 
+    h3,
+    h2 {
+} }
+.tb-megamenu h2.block__title,
+.tb-megamenu h3 {
+        font-size: 10rem;
+        font-size: rem-calc(24);
+        font-weight:bold;
+
+    }
+

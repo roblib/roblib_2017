@@ -1,6 +1,11 @@
 .admin-menu {
     &__button {
-@include hamburger($white);
+padding:0;        
+margin:0;
+@include hamburger(
+$red, $red, 26px, 22px, 3px, 4
+);
+background: none !important;
     }
     &__dropdown {
         background:#fff;
@@ -16,6 +21,6 @@
 .not-logged-in .admin-menu__button {
             display: none;
         }
-        .admin-menu__container {
+        .searchtabs .admin-menu__container {
             float: right;
         }
