@@ -46,6 +46,7 @@
 $('.js-search-results__container .books').append($('#roblib-eds-books-toc'));
 $('.js-search-results__container .articles').append($('#roblib-eds-articles-toc'));
 $('.js-search-results__container .web').append($('#roblib-solr-search-toc-results'));
+        $('.searchtabs .tabs').append($('.admin-menu__container'));
 
             //$('#roblib-eds-books-toc a').hide();
         //$('.js-search-results__container .books', context).once('bento', function () {

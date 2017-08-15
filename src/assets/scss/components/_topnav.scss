@@ -2,11 +2,88 @@
     flex: 1 0 auto;
 }
 .site-logo {
-    float:left;
+    //float:left;
     width:rem-calc(120);
 }
 .top-bar {
     a {
         color:$white;
     }
+}
+
+.placeholder {
+    background:#ccc;
+    .logo {
+        width:200px;
+    }
+}
+.branding {
+    li:first-child {
+        border-right:1px solid $white;
+        padding-right:.5rem;
+        margin-right:.5rem;
+    }
+    a {
+        @include padding(0,0,0,0);
+    }
+
+    font-family: $header-font-family;
+    font-size: rem-calc(22);
+}
+.top-left,
+.top-center,
+.top-right {
+    //outline:1px solid #fff;
+}
+.top-bar {
+    $columns: 18;
+    @include flex-grid-row(
+    collapse,
+    expand,
+    null,
+    true,
+    $grid-column-gutter
+    );
+
+}
+
+$l-r-width: 20%;
+.top-left {
+    @include flex-grid-column($l-r-width, 0);
+
+}
+.top-center {
+    @include flex-grid-column();
+    .tb-megamenu-nav {
+            width: rem-calc(675);
+                margin: 0 auto !important;
+    }
+
+}
+.top-right {
+    @include flex-grid-column($l-r-width, 0);
+    //@include flex-align($x: right, $y: stretch);
+    button {
+        @include breakpoint(xlarge) {
+            display:none;
+        }
+    }
+
+}
+.view-current-library-hours {
+    display: none;
+    @include breakpoint(xlarge) {
+        text-align:center;
+        border: 1px solid #fff;
+        background:#ccc;
+        display: inline-block;
+        float: right;
+        font-size:rem-calc(14);
+        border-radius: $global-radius;
+        a {
+
+            color:#333;
+        }
+    }
+
 }
