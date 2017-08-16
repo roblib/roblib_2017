@@ -25,8 +25,8 @@
  */
 ?>
 
-<ul class="search-tabs accordion-tabs">
-  <?php print $content; ?>
-</ul>
-
-
+  <div class="expanded button-group success">
+  	<?php
+  	  print $content;
+  	?>
+  </div>
