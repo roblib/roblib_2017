@@ -12,6 +12,12 @@ background: none !important;
         //@include callout();
         ul {
             border:none;
+            background:none;
+            @include menu-base();
+            @include menu-direction(vertical);
+            li.active {
+                @extend .is-active;
+            }
         }
 
     }
@@ -23,4 +29,12 @@ background: none !important;
         }
         .searchtabs .admin-menu__container {
             float: right;
+        }
+        button.button.admin-menu__button {
+                position: absolute;
+                    top: 1rem;
+                        right: 1rem;
+                            display: inline-grid;
+                                /* float: right; */
+
         }
