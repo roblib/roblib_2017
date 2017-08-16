@@ -8,7 +8,7 @@
     .block .title {
         color:$white;
         //text-transform: uppercase;
-        font-size: rem-calc(20);
+        font-size: rem-calc(18);
         font-weight:600;
         margin-top: $global-margin;
     }
@@ -43,7 +43,8 @@
     @include menu-direction(horizontal);
         .fa {
             font-size:2rem;
-            padding-right: $global-padding;
+            //padding-right: $global-padding20*2;
+            @include padding(0,1,1,1);
         }
     }
 }
@@ -122,4 +123,7 @@ div#address_right {
             justify-content: flex-end;
             align-items: center;
 
+}
+.not-logged-in .staff-tasks {
+    display: none;
 }

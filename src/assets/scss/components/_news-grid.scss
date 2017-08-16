@@ -13,9 +13,19 @@
 
 }
 .news-grid__tile {
-    height: rem-calc(177);
+    img {
+       //max-width: rem-calc(240);
+       //max-height:rem-calc(200);
+       height:rem-calc(160);
+       width:auto;
+    }
+    height: rem-calc(200);
     a {
 float:right;        //@include button();
         //padding:0;
+    }
+    h3 {
+        font-weight: bold;
+        font-size:rem-calc(20);
     }
 }
