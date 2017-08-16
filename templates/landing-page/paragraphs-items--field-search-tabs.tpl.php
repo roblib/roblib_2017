@@ -1,5 +1,5 @@
 <?php
-
+dpm($variables);
 /**
  * @file
  * Default theme implementation for a group of paragraph items.
@@ -24,7 +24,7 @@
  * @see template_process()
  * field_title 
  * field_search_code 
- * field_footer_text
+ * field_below_the_box_text
  *
  *
  */
@@ -58,19 +58,19 @@ $tab4 = $variables['element'][3]['entity']['paragraphs_item'][4];
         <div class="tabs-content" data-tabs-content="collapsing-tabs">
             <div class="tabs-panel is-active" id="tab1">
 <?php print render($tab1['field_search_code'][0]['#markup']); ?>
-<?php print render($tab1['field_footer_text'][0]['#markup']); ?>
+<?php print render($tab1['field_below_the_box_text'][0]['#markup']); ?>
             </div>
             <div class="tabs-panel" id="tab2">
 <?php print render($tab2['field_search_code'][0]['#markup']); ?>
-<?php print render($tab2['field_footer_text'][0]['#markup']); ?>
+<?php print render($tab2['field_below_the_box_text'][0]['#markup']); ?>
            </div>
             <div class="tabs-panel" id="tab3">
 <?php print render($tab3['field_search_code'][0]['#markup']); ?>
-<?php print render($tab3['field_footer_text'][0]['#markup']); ?>
+<?php print render($tab3['field_below_the_box_text'][0]['#markup']); ?>
            </div>
             <div class="tabs-panel" id="tab4">
 <?php print render($tab4['field_search_code'][0]['#markup']); ?>
-<?php print render($tab4['field_footer_text'][0]['#markup']); ?>
+<?php print render($tab4['field_below_the_box_text'][0]['#markup']); ?>
            </div>
         </div>
     </div>

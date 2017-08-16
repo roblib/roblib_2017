@@ -5,50 +5,39 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 ?>
 
 <div class="l-page">
-<!--______________________topnav______________________-->
-<header class="l-header" role="banner">
+	<!--______________________topnav______________________-->
 
-    <div class="top-bar" id="upei-topbar">
-        <div class="top-bar-left">
+	<header class="l-header" role="banner">
+		<div id="upei-topbar" class="top-bar">
 
-					<!-- logo -->
-					<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
-<img class="site-logo" src="http://librarytest.upei.ca/sites/librarytest.upei.ca/themes/themes/roblib_2017/dist/assets/img/logo.svg">
-					</a>
-					<!-- end logo -->
-			<!--<ul class="branding">-->
-				<!--<li>-->
-					<!--[> logo <]-->
-					<!--<a href="www.upei.ca">-->
-						<!--<img class="site-logo" src="<?php print $theme_path;?>/dist/assets/img/logo.svg">-->
+			<div class="top-left">
+				<ul class="branding menu">
+				<li>
+				<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
+					<img class="site-logo" src="http://librarytest.upei.ca/sites/librarytest.upei.ca/themes/themes/roblib_2017/dist/assets/img/logo.svg">
+				</a>
+					<!--<a href="<?php print $front_page; ?>" title="<?php print t('home'); ?>" rel="home">-->
+						<!--<img class="site-logo" src="<?php print $logo ?>">-->
 					<!--</a>-->
-					<!--[> end logo <]-->
-				<!--</li>-->
+				</li>
+				<li>
+					<span class="site-name">
+					<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">Robertson<br>Library</a>
+					</span>
+				</li>
+				</ul>
+			</div>
+			<div class="top-center">
+				<?php print render($page['menu_bar_center']); ?>
+			</div>
+			<div class="top-right">
+				<?php print views_embed_view('current_library_hours', 'block'); ?>
+					<button type="button" class="button" data-toggle="offCanvas">Open Menu</button>
+			</div>
 
-			<!--<li>-->
-				  <!--<span class="site-name">-->
-					<!--<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">Robertson<br>Library</a>-->
-				  <!--</span>-->
-			<!--</li>-->
-			<!--</ul>-->
+		</div>
 
-
-        </div>
-        <div class="top-bar-center">
-            <?php print render($page['menu_bar_center']); ?>
-        </div>
-        <div class="top-bar-right">
-            <ul class="menu">
-                <li>
-                    <?php print render($page['menu_bar_right']); ?>
-                </li>
-                <li>
-                    <button type="button" class="button" data-toggle="offCanvas">Open Menu</button>
-                </li>
-            </ul>
-        </div>
-    </div>
-</header>
+	</header>
 <!--++++++++++++++tabs+++++++++++++++++++++ -->
 
 <!--______________________messages_____________________________-->

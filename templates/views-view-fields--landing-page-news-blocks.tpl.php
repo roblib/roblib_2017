@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Default simple view template to all the fields as a row.
@@ -25,18 +24,20 @@
  */
 ?>
 
-		<div class="callout news-grid__tile events media-object">
-			<div class="media-object-section">
-				<div class="thumbnail">
-	<?php print $fields['field_image']->content; ?>
+		<a class="news-grid__link" href="/node/<?php print $fields['view_node']->raw; ?>">
+			<div class="callout news-grid__tile events media-object">
+				<div class="media-object-section">
+					<div class="thumbnail">
+		<?php print $fields['field_image']->content; ?>
+					</div>
+				</div>
+				<div class="media-object-section">
+					<h4>
+		<?php print $fields['title']->raw; ?>
+	</h4>
+
+		<?php print $fields['body']->content; ?>
+		
 				</div>
 			</div>
-			<div class="media-object-section">
-				<h4>
-	<?php print $fields['title']->raw; ?>
-</h4>
-
-	<?php print $fields['body']->content; ?>
-	<?php print $fields['view_node']->content; ?>
-			</div>
-		</div>
+		</a>

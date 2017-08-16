@@ -26,14 +26,4 @@
  * @see template_process()
  */
 ?>
-	<div class="subject_librarian__container">
-	<a class="subject_librarian__link" href="<?php print $content['field_librarian_link']['#items'][0]['url'] ?>">
-			<div class="subject_librarian">
-			  <div class="subject_librarian__image">
-			<?php print render( $content['field_librarian_image'] ); ?>
-			  </div>
-			  <h4 class="subject_librarian__name"><?php print render($content['field_librarian_name']); ?></h4>
-			  <?php print render($content['field_librarian_subject']); ?>
-			</div>
-		</a>
-	</div>
+    <?php print render($content); ?>
