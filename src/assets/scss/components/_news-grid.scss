@@ -29,3 +29,6 @@ float:right;        //@include button();
         font-size:rem-calc(20);
     }
 }
+.news-grid__text {
+    overflow:hidden;
+}
