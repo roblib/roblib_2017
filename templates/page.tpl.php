@@ -16,9 +16,6 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 				<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
 					<img class="site-logo" src="/sites/all/themes/roblib_2017/dist/assets/img/logo.svg">
 				</a>
-					<!--<a href="<?php print $front_page; ?>" title="<?php print t('home'); ?>" rel="home">-->
-						<!--<img class="site-logo" src="<?php print $logo ?>">-->
-					<!--</a>-->
 				</li>
 				<li>
 					<span class="site-name">
