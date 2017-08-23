@@ -10,7 +10,7 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 	<header class="l-header" role="banner">
 		<div id="upei-topbar" class="top-bar">
 
-<!-- ################## left ####################### -->
+<!-- ################## left ###################### -->
 
 			<div class="top-left">
 				<ul class="branding menu">
@@ -34,8 +34,8 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 			</div>
 <!-- ################## right ####################### -->
 			<div class="top-right">
-				<?php print views_embed_view('current_library_hours', 'block'); ?>
-					<button type="button" class="button" data-toggle="offCanvas">Open Menu</button>
+				 <?php print views_embed_view('current_library_hours', 'block'); ?>
+					<button type="button" class="button" data-toggle="offCanvas">Menu</button>
 			</div>
 
 <!-- ################## end  ####################### -->
