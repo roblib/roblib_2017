@@ -1,22 +1,18 @@
-.top-bar-center {
-    flex: 1 0 auto;
+#admin-menu {
+    display:none;
 }
-.site-logo {
-    //float:left;
-    width:rem-calc(120);
+.tb-megamenu button.btn-navbar {
+    display: none;
 }
+//################### style ######################
+
 .top-bar {
     a {
         color:$white;
     }
+    height:rem-calc(63);
 }
 
-.placeholder {
-    background:#ccc;
-    .logo {
-        width:200px;
-    }
-}
 .branding {
     li:first-child {
         border-right:1px solid $white;
@@ -30,62 +26,83 @@
     font-family: $header-font-family;
     font-size: rem-calc(22);
 }
+
+.site-logo {
+    //float:left;
+    width:rem-calc(120);
+    height:auto;
+}
 .top-left,
 .top-center,
 .top-right {
-    //outline:1px solid #fff;
-}
-.top-bar {
-    $columns: 18;
-    @include flex-grid-row(
-    collapse,
-    expand,
-    null,
-    true,
-    $grid-column-gutter
-    );
-
-    //padding-top:0;
-    padding-bottom:0;
+    outline:1px solid #fff;
 }
 
-$l-r-width: 20%;
-.top-left {
-    @include flex-grid-column($l-r-width, 0);
+.top-bar .view-current-library-hours {
+    text-align:center;
+    border: 1px solid #fff;
+    background:#ccc;
+    display: inline-block;
+    float: right;
+    font-size:rem-calc(14);
+    border-radius: $global-radius;
+    a {
 
-}
-.top-center {
-    @include flex-grid-column();
-    .tb-megamenu-nav {
-            width: rem-calc(675);
-                margin: 0 auto !important;
+        color:#333;
     }
-
 }
-.top-right {
-    @include flex-grid-column($l-r-width, 0);
-    //@include flex-align($x: right, $y: stretch);
+.top-bar button {
+    float:right;
+    //@include hamburger();
+}
+.top-left, .top-right {
+    width: 240px;
+}
+
+//################### sstructure ######################
+
+.top-bar { 
+    $top-bar-breakpoint: 1200px;
+    .view-current-library-hours {
+        display: none;
+        @include breakpoint($top-bar-breakpoint) {
+            display: inline-block;
+        }
+
+    }
     button {
-        @include breakpoint(xlarge) {
+        @include breakpoint($top-bar-breakpoint) {
             display:none;
         }
     }
+    .top-center {
 
-}
-.view-current-library-hours {
-    display: none;
-    @include breakpoint(xlarge) {
-        text-align:center;
-        border: 1px solid #fff;
-        background:#ccc;
-        display: inline-block;
-        float: right;
-        font-size:rem-calc(14);
-        border-radius: $global-radius;
-        a {
-
-            color:#333;
+            display:none;
+        @include breakpoint($top-bar-breakpoint) {
+            display: initial;
         }
     }
+}
+.top-left, .top-right {
+    width: 240px;
+}
+//.top-bar-center {
+//flex: 1 0 auto;
+//}
+
+.sub {
+    width: 1120px;
+    transform: translateX(-252px);
+}
+
+//#########################################
+
+.top-bar {
+    padding-top:0;
+    padding-bottom:0;
+}
+
+
+.top-right {
 
 }
