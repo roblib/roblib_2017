@@ -26,15 +26,15 @@
 
 		<a class="news-grid__link" href="/node/<?php print $fields['view_node']->raw; ?>">
 			<div class="callout news-grid__tile events media-object">
-				<div class="media-object-section">
+				<div class="news-grid__image media-object-section">
 					<div class="thumbnail">
 		<?php print $fields['field_image']->content; ?>
 					</div>
 				</div>
-				<div class="media-object-section">
-					<h4>
+				<div class="media-object-section news-grid__text">
+					<h3>
 		<?php print $fields['title']->raw; ?>
-	</h4>
+	</h3>
 
 		<?php print $fields['body']->content; ?>
 		

@@ -1,5 +1,4 @@
 <?php
-dpm($variables);
 /**
  * @file
  * Default theme implementation for a group of paragraph items.
@@ -28,10 +27,10 @@ dpm($variables);
  *
  *
  */
-$tab1 = $variables['element'][0]['entity']['paragraphs_item'][1];
-$tab2 = $variables['element'][1]['entity']['paragraphs_item'][2];
-$tab3 = $variables['element'][2]['entity']['paragraphs_item'][3];
-$tab4 = $variables['element'][3]['entity']['paragraphs_item'][4];
+$tab1 = $variables['element'][0]['entity']['paragraphs_item'][5];
+$tab2 = $variables['element'][1]['entity']['paragraphs_item'][11];
+$tab3 = $variables['element'][2]['entity']['paragraphs_item'][12];
+$tab4 = $variables['element'][3]['entity']['paragraphs_item'][13];
 /*
  * $nolabel = [0]['#markup'];
  */
@@ -40,7 +39,7 @@ $tab4 = $variables['element'][3]['entity']['paragraphs_item'][4];
  <?php print render($tabs); ?>
 <div class="searchtabs__container">
     <div class="searchtabs">
-		<ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
+		<ul class="tabs"  data-tabs id="collapsing-tabs">
 			<li class="tabs-title is-active"><a href="#tab1" aria-selected="true">
 <?php print render($tab1['field_title'][0]['#markup']); ?>
 </a></li>

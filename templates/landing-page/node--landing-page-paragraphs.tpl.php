@@ -11,6 +11,9 @@ print render($content);
 ?>
 <!--===================== Help me =========================-->
 
+<div class="lp-button-group">
+	<?php print render($content['field_navigation_button_group']);?>
+</div>
 <section class="help-me">
 
 <div class="left">
@@ -52,6 +55,3 @@ print render($content);
 
 
 <!--===================== news =========================-->
-<div class="lp-button-group">
-	<?php print render($content['field_navigation_button_group']);?>
-</div>

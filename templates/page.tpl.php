@@ -14,7 +14,7 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 				<ul class="branding menu">
 				<li>
 				<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
-					<img class="site-logo" src="http://librarytest.upei.ca/sites/librarytest.upei.ca/themes/themes/roblib_2017/dist/assets/img/logo.svg">
+					<img class="site-logo" src="/sites/all/themes/roblib_2017/dist/assets/img/logo.svg">
 				</a>
 					<!--<a href="<?php print $front_page; ?>" title="<?php print t('home'); ?>" rel="home">-->
 						<!--<img class="site-logo" src="<?php print $logo ?>">-->
