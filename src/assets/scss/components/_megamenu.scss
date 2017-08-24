@@ -272,6 +272,7 @@
   text-decoration: none;
   outline: 0;
   background-color: $red;
+  background-image: none;
 }
 .tb-megamenu .dropdown-menu .disabled > a,
 .tb-megamenu .dropdown-menu .disabled > a:hover {
@@ -1653,10 +1654,6 @@
 
 //==================================
 
-	.sub {
-		width: 1120px;
-        //transform: translateX(-180px);
-	}
 
 .sub tbody {
 	border: 0;
@@ -1738,7 +1735,7 @@
 	@include icon("");
 }
 
-.collections .dropdown-panel-title h2, .section-bar-digital h1#page-title {
+.collections .dropdown-panel-title h2 a, .section-bar-digital h1#page-title {
 	@include icon("");
 }
 
@@ -1757,7 +1754,7 @@
     margin:0;
                 line-height: 1.5em;
                 margin:10px; 
-                border-bottom:1px solid #cecfcc;
+                //border-bottom:1px solid #cecfcc;
             
 }
 .megamenu ul {
@@ -1783,7 +1780,9 @@
 
 // faq
 .tb-megamenu .tb-block ul, .tb-megamenu .tb-block .nav {
-	margin: 1em 0 1em 40px;
+	//margin: 1em 0 1em 40px;
+        margin: 0 0 1em 27px;
+
 	list-style-type: disc;
 }
 
@@ -1808,7 +1807,6 @@
 .tb-megamenu .dropdown-menu a.green-button {
 	//@include green-button;
 
-	padding: 0.5em 1.5em !important;
 	margin-top: 10px;
 }
 
@@ -1820,6 +1818,7 @@
 
 	.databases .tb-block form {
 		margin: 0px;
+        display:none;
 	}
 }
 
@@ -1828,7 +1827,7 @@
 }
 
 div#block-panels-mini-databases {
-    height: 243px;
+    //height: 243px;
 }
 /*button row*/
 /*.button-container .mega-nav li {*/
@@ -1863,52 +1862,52 @@ div#block-panels-mini-databases {
 
 /*databases by subject block*/
 .db_by_subject ul {
-	-webkit-columns: 6;
+    -webkit-columns: 6;
 
-	/* Chrome, Safari, Opera */
-	-moz-columns: 6;
+    /* Chrome, Safari, Opera */
+    -moz-columns: 6;
 
-	/* Firefox */
-	columns: 6;
-	-webkit-column-rule: 1px solid #ccc;
+    /* Firefox */
+    columns: 6;
+    -webkit-column-rule: 1px solid #ccc;
 
-	/* Chrome, Safari, Opera */
-	-moz-column-rule: 1px solid #ccc;
+    /* Chrome, Safari, Opera */
+    -moz-column-rule: 1px solid #ccc;
 
-	/* Firefox */
-	column-rule: 1px solid #ccc;
+    /* Firefox */
+    column-rule: 1px solid #ccc;
 
-	/*height: 150px;*/
+    /*height: 150px;*/
 }
 
 .db_by_subject ul a {
-	text-decoration: none;
-	color: #8c2004;
+    text-decoration: none;
+    color: #8c2004;
 }
 
 .db_by_subject li {
-	list-style-type: none !important;
-	list-style-image: none !important;
-	font-size: .8em;
-	margin-bottom: 4px;
+    list-style-type: none !important;
+    list-style-image: none !important;
+    font-size: .8em;
+    margin-bottom: 4px;
 }
 
 .databases .green-button a {
-	border: 0 !important;
-	padding: 0 !important;
+    //border: 0 !important;
+    //padding: 0 !important;
 }
 
 // tours
 #tours-page-link {
-	p {
-		margin: 0;
-	}
+    p {
+        margin: 0;
+    }
 
-	a {
-		display: block;
-		text-align: center;
-		margin-top: 10px;
-	}
+    a {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
 }
 
 .libraryh3lp, .libraryh3lp2 {
@@ -1923,8 +1922,8 @@ div#block-panels-mini-databases {
         border: none !important;
     }
 }
-.tb-megamenu li a {
-    font-family:$roboto-condensed !important;
+.tb-megamenu .panel-display li a {
+    font-family:$roboto-condensed;
 }
 .tb-megamenu { 
     table thead, table tbody, table tfoot {
@@ -1936,9 +1935,73 @@ div#block-panels-mini-databases {
 } }
 .tb-megamenu h2.block__title,
 .tb-megamenu h3 {
-        font-size: 10rem;
-        font-size: rem-calc(24);
-        font-weight:bold;
+    font-size: 10rem;
+    font-size: rem-calc(24);
+    font-weight:bold;
 
+}
+.dropdown-panel-title h2 a {
+    display:inline-block;
+}
+.tb-megamenu .dropdown-menu a.green-button {
+
+    @include button();
+    @include button-style($green);
+}
+a.green-button {
+}
+.brenham-flipped-container {
+    margin-bottom: 0;
+
+}
+.tb-megamenu-row.row-fluid {
+
+}
+.tb-megamenu .databases { 
+    table {
+        margin: 0;
+    }
+    .tb-block ul {
+        margin:0;
+    } 
+}
+.tb-megamenu .dropdown-menu p a {
+    color: #8C2004;
+    display: inline;
+    padding: 0;
+
+}
+.dropdown table tbody tr {
+    background: none;
+
+}
+
+
+.collections td {padding-top: -26px !important;}
+
+.faq {
+    dt, dd { 
+    font-size:.9rem;
+    float: left  }
+    dt { clear:both  }
+    dt {width: 247px;}
+    .ui-accordion .ui-widget-content {
+            font-size: .9rem;
+            padding: 1rem .2rem 0;
+
+            font-family:$roboto-condensed;
+            border-color: $medium-gray;
     }
 
+    .ui-accordion .ui-accordion-header {
+        background: $medium-gray;
+        border: 0;
+        color:$green;
+        border-bottom: 2px solid;
+        a {
+        color:$black;
+            font-family:$roboto-condensed;
+        }
+
+    }
+}
