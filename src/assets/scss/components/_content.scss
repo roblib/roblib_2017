@@ -1,3 +1,9 @@
 .content {
     @include callout();
+    @include padding( 1, 2, 1, 2 );
+    h1 {
+        border-bottom: 1px solid $medium-gray;
+        margin-bottom: $global-margin;
+    }
 }
+
