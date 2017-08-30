@@ -1,5 +1,5 @@
 .off-canvas {
-    padding-top: $global-padding*2;
+    padding-top: $global-padding;
     .main_menu .menu {
         //margin-top:$global-margin*4;
         @include margin(1,0,1,0)
@@ -29,7 +29,7 @@
             margin:0;
             border-radius: 0;
             border: 1px solid $dark-gray;
-            border-left: 0px;
+            border-left: 4px solid $green;
             border-right: 0px;
             border-top-width: 1px;
             border-bottom-width: 0px;
@@ -66,7 +66,7 @@
 
     .close-button {
         right: 1rem;
-        top: 2rem;
+        top: 1rem;
         font-size: 2em;
         line-height: 1;
 
