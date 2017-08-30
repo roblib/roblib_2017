@@ -50,10 +50,8 @@
 }
 .top-bar button {
     float:right;
+    margin-top:18px;
     //@include hamburger();
-}
-.top-left, .top-right {
-    width: 240px;
 }
 
 //################### sstructure ######################
@@ -81,7 +79,9 @@
     }
 }
 .top-left, .top-right {
-    width: 240px;
+    @include breakpoint(medium) {
+        width: 240px;
+    }
 }
 //.top-bar-center {
 //flex: 1 0 auto;

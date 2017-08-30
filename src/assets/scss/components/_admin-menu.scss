@@ -1,11 +1,11 @@
 .admin-menu {
     &__button {
-padding:0;        
-margin:0;
-@include hamburger(
-$red, $red, 26px, 22px, 3px, 4
-);
-background: none !important;
+        padding:0;        
+        margin:0;
+        @include hamburger(
+        $red, $red, 26px, 22px, 3px, 4
+        );
+        background: none !important;
     }
     &__dropdown {
         background:#fff;
@@ -24,17 +24,17 @@ background: none !important;
     @at-root {
     }
 }
-.not-logged-in .admin-menu__button {
-            display: none;
-        }
-        .searchtabs .admin-menu__container {
-            float: right;
-        }
-        button.button.admin-menu__button {
-                position: absolute;
-                    top: 1rem;
-                        right: 1rem;
-                            display: inline-grid;
-                                /* float: right; */
+.admin-menu__button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: inline-grid;
+    /* float: right; */
 
-        }
+}
+.not-logged-in .admin-menu__button {
+    display: none;
+}
+.searchtabs .admin-menu__container {
+    float: right;
+}

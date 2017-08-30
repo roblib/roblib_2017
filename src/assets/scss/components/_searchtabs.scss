@@ -21,6 +21,11 @@
         font-size: rem-calc(18);
         font-family: $roboto-condensed;
         margin-right:2px;
+        padding:0px;
+    padding: 0.8rem 1rem;
+    @include breakpoint(medium) {
+        padding: 0.8rem 1.5rem;
+    }
         &:hover {
 
             color: $primary-color;
@@ -65,5 +70,8 @@
         @extend .input-group-field;
         //@include button();
         border-radius: $global-radius 0 0 $global-radius;
+    }
+    .tabs-panel {
+        @include padding(1,0,0,0);
     }
 }
