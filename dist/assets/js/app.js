@@ -22248,105 +22248,46 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 (function ($) {
 
-  /**
-   * The recommended way for producing HTML markup through JavaScript is to write
-   * theming functions. These are similiar to the theming functions that you might
-   * know from 'phptemplate' (the default PHP templating engine used by most
-   * Drupal themes including Omega). JavaScript theme functions accept arguments
-   * and can be overriden by sub-themes.
-   *
-   * In most cases, there is no good reason to NOT wrap your markup producing
-   * JavaScript in a theme function.
-   */
-  Drupal.theme.prototype.roblib2017ExampleButton = function (path, title) {
-    // Create an anchor element with jQuery.
-    return $('<a href="' + path + '" title="' + title + '">' + title + '</a>');
-  };
+    Drupal.behaviors.bentoSearch = {
+        attach: function attach(context, settings) {
 
-  /**
-   * Behaviors are Drupal's way of applying JavaScript to a page. In short, the
-   * advantage of Behaviors over a simple 'document.ready()' lies in how it
-   * interacts with content loaded through Ajax. Opposed to the
-   * 'document.ready()' event which is only fired once when the page is
-   * initially loaded, behaviors get re-executed whenever something is added to
-   * the page through Ajax.
-   *
-   * You can attach as many behaviors as you wish. In fact, instead of overloading
-   * a single behavior with multiple, completely unrelated tasks you should create
-   * a separate behavior for every separate task.
-   *
-   * In most cases, there is no good reason to NOT wrap your JavaScript code in a
-   * behavior.
-   *
-   * @param context
-   *   The context for which the behavior is being executed. This is either the
-   *   full page or a piece of HTML that was just added through Ajax.
-   * @param settings
-   *   An array of settings (added through drupal_add_js()). Instead of accessing
-   *   Drupal.settings directly you should use this because of potential
-   *   modifications made by the Ajax callback that also produced 'context'.
-   */
-  Drupal.behaviors.bentoSearch = {
-    attach: function attach(context, settings) {
+            $('.js-search-results__container .books').append($('#roblib-eds-books-toc'));
+            $('.js-search-results__container .articles').append($('#roblib-eds-articles-toc'));
+            $('.js-search-results__container .web').append($('#roblib-solr-search-toc-results'));
+            $('.searchtabs .tabs').append($('.admin-menu__container'));
 
-      //$('#roblib-eds-books-toc a').hide();
-      //$('.js-search-results__container .books').hide();
-      $('.js-search-results__container .books').append($('#roblib-eds-books-toc'));
-      $('.js-search-results__container .articles').append($('#roblib-eds-articles-toc'));
-      $('.js-search-results__container .web').append($('#roblib-solr-search-toc-results'));
-      $('.searchtabs .tabs').append($('.admin-menu__container'));
+            //move the all results link to bento block header
+            var header = '.roblib-search-eds-media-header';
+            var link = '#roblib-search-eds-more';
+            $(header).append($(link));
 
-      //$('#roblib-eds-books-toc a').hide();
-      //$('.js-search-results__container .books', context).once('bento', function () {
+            var header = '.roblib-search-eds-articles-header';
+            var link = '#roblib-search-eds-article-more';
+            $(header).append($(link));
 
-      //$('#roblib-eds-books-toc a').hide();
+            var header = '.roblib-search-solr-results-header';
+            var link = '#roblib-search-solr-site-results-more';
+            $(header).append($(link));
+        }
+    };
+    Drupal.behaviors.roblib2017ExampleBehavior = {
+        attach: function attach(context, settings) {
+            // By using the 'context' variable we make sure that our code only runs on
+            // the relevant HTML. Furthermore, by using jQuery.once() we make sure that
+            // we don't run the same piece of code for an HTML snippet that we already
+            // processed previously. By using .once('foo') all processed elements will
+            // get tagged with a 'foo-processed' class, causing all future invocations
+            // of this behavior to ignore them.
+            $('.some-selector', context).once('foo', function () {
+                // Now, we are invoking the previously declared theme function using two
+                // settings as arguments.
+                var $anchor = Drupal.theme('roblib2017ExampleButton', settings.myExampleLinkPath, settings.myExampleLinkTitle);
 
-      //});
-    }
-  };
-  Drupal.behaviors.roblib2017ExampleBehavior = {
-    attach: function attach(context, settings) {
-      // By using the 'context' variable we make sure that our code only runs on
-      // the relevant HTML. Furthermore, by using jQuery.once() we make sure that
-      // we don't run the same piece of code for an HTML snippet that we already
-      // processed previously. By using .once('foo') all processed elements will
-      // get tagged with a 'foo-processed' class, causing all future invocations
-      // of this behavior to ignore them.
-      $('.some-selector', context).once('foo', function () {
-        // Now, we are invoking the previously declared theme function using two
-        // settings as arguments.
-        var $anchor = Drupal.theme('roblib2017ExampleButton', settings.myExampleLinkPath, settings.myExampleLinkTitle);
-
-        // The anchor is then appended to the current element.
-        $anchor.appendTo(this);
-      });
-    }
-  };
-
-  //Drupal.behaviors.searchtabs = {
-  //attach: function (context, settings) {
-
-  //alert("yay");
-  ////$('.accordion-tabs').hide();
-  //$('.accordion-tabs').each(function(index) {
-  //$(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
-  //});
-  //$('.accordion-tabs').on('click', 'li > a.tab-link', function(event) {
-  //if (!$(this).hasClass('is-active')) {
-  //event.preventDefault();
-  //var accordionTabs = $(this).closest('.accordion-tabs');
-  //accordionTabs.find('.is-open').removeClass('is-open').hide();
-
-  //$(this).next().toggleClass('is-open').toggle();
-  //accordionTabs.find('.is-active').removeClass('is-active');
-  //$(this).addClass('is-active');
-  //} else {
-  //event.preventDefault();
-  //}
-  //});
-
-  //}
-  //};
+                // The anchor is then appended to the current element.
+                $anchor.appendTo(this);
+            });
+        }
+    };
 })(jQuery);
 
 /***/ }),

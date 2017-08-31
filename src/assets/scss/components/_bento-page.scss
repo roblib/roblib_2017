@@ -65,18 +65,102 @@
         auto
         )
         @include button-expand(true);
-        @include margin(1);
+        //@include margin(1);
+        margin:0;
+        border-radius:0;
+        text-transform: uppercase;
+        font-family: $roboto-condensed;
+        padding: 8px;
+
     }
 }
 .not-included {
     h2 {
-            background: #333;
-                padding-left: 5px;
-                    border-left: solid;
-                    border-color: $success-color;
-                        color: white;
+        background: #333;
+        padding-left: 5px;
+        border-left: solid;
+        border-color: $success-color;
+        color: white;
+        font-size: rem-calc(24);
     }
     p {
         margin-left: $global-margin/2;
     }
+}
+.pane-roblib-search-solr-site-roblib-search-solr-site-bestbet {
+    margin-bottom:$global-margin*2;
+    margin-top: $global-margin;
+}
+//====================
+//bento headers
+//====================
+.roblib-search-header {
+    @include flex;
+    @include flex-align(null,middle);
+    justify-content: space-between;
+    border-color: $red;
+    border-left-width: 10px;
+
+    //remove default margin
+    h2 {
+
+        margin:0;
+        font-size: rem-calc(24);
+    }
+
+    .roblib-search-more a {
+        color:$white;
+        font-family: $roboto-condensed;
+        font-size: rem-calc(14);
+        text-transform: uppercase;
+        //color: lighten($green, 40%);
+        color: $white;
+        padding:3px;
+        border-radius: 4px;
+        transition: all .5s ease;
+        &:hover {
+            background: $light-gray;
+            color:$red;
+            background: $white;
+        }
+
+    }
+}
+.pane-roblib-search-solr-site {
+    .roblib-search-row {
+        padding: 4px 8px;
+        display:flex;
+        transition: all .3s ease;
+        &:hover {
+            background: darken($white, 10%);
+        }
+    }
+    .solr-site-results {
+        white-space: initial;
+        overflow: initial;
+        text-overflow: initial;
+        word-wrap: initial;
+        margin-right: 0;
+        width: inherit;
+
+    }
+    .roblib-solr-bundle{
+        &:after {
+            content: ':';
+             color:$black;
+        }
+    }
+    .roblib-title, .roblib-solr-bundle {
+        flex-shrink:0;
+        margin-right:$global-margin/3;
+        //text-decoration:underline;
+    }
+    .roblib-solr-teaser {
+        white-space: nowrap;
+        overflow: hidden;
+        font-family: $roboto-condensed;
+        text-overflow: ellipsis;    
+
+        min-width: 0;
+    } 
 }
