@@ -21,6 +21,7 @@
             var link = '#roblib-search-solr-site-results-more';
             $( header ).append($( link ));
 
+
         }
     };
     Drupal.behaviors.roblib2017ExampleBehavior = {
