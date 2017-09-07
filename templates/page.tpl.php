@@ -69,13 +69,13 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
             <h1><?php print $title; ?></h1>
             <?php endif; ?>
             <?php print render($title_suffix); ?>
-</div> 
-
             <?php if ($action_links): ?>
             <ul class="action-links"><?php print render($action_links); ?></ul>
             <?php endif; ?>
             <?php print render($page['content']); ?>
             <?php print $feed_icons; ?>
+</div> 
+
         </div>
 
     <?php print render($page['sidebar_first']); ?>
