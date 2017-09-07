@@ -1,0 +1,118 @@
+//blocks
+.l-main aside > .block,
+.section-people .content .block {
+
+    @include callout;
+    padding:0;
+    .block__title {
+        background:$black;
+        color:$white;
+
+        padding:5px $global-padding 0;
+        margin:0;
+        border-radius: $global-radius $global-radius 0 0;
+        border-bottom: 4px solid $green;
+
+    }
+    .block__content {
+        padding:$global-padding;
+
+    }
+
+}
+
+//file upload buttons
+input[type="submit"] {
+
+    @include button(false, $success-color, auto, auto, solid);
+    margin-bottom:0;
+}
+
+.search-block-form {
+    .form-type-textfield { 
+        width:100%;
+    }
+    label {
+        display:none;
+    }
+    .container-inline {
+        @extend .input-group;
+    }
+    input[type="text"] {
+
+        @extend .input-group-field;
+        //@include button();
+        border-radius: $global-radius 0 0 $global-radius;
+    }
+    input[type="submit"] {
+        @extend .input-group-button;
+        @include button();
+        @include button-style(
+        //$background, 
+        $success-color,
+        //$background-hover, 
+        auto,
+        //$color
+        auto
+        );
+        border-radius: 0 $global-radius $global-radius 0;
+    }
+}
+
+//form cancel button 
+a#edit-cancel {
+
+    @include button();
+    @include button-style(
+    //$background, 
+    $alert-color,
+    //$background-hover, 
+    auto,
+    //$color
+    auto
+    );
+    margin-bottom:0;
+}
+.confirm-form .form-actions {
+    > * {
+
+        //@extend .button;
+    }
+    @include button-group('*', 0px);
+
+    *:first-child {
+        border-radius: $global-radius 0 0 $global-radius;
+    }
+    #edit-cancel {
+        border-radius: 0 $global-radius $global-radius 0;
+    }
+}
+.pager {
+    @include pagination-container;
+    .pager__item--current {
+        @include pagination-item-current;
+    }
+}
+
+.progress {
+    //Adds styles for a progress bar container.
+    .bar {
+
+        @include progress-container;
+    }
+    .filled {
+
+        @include progress-meter;
+    }
+    .percentage {
+
+        //@include progress-meter-text;
+    }
+}
+
+//progress-meter
+//@include progress-meter;
+//Adds styles for the inner meter of a progress bar.
+
+//progress-meter-text
+//@include progress-meter-text;

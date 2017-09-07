@@ -22248,6 +22248,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 (function ($) {
 
+    Drupal.behaviors.peoplepages = {
+        attach: function attach(context, settings) {
+
+            $('.section-people #block-views-subject-guides-block-1').appendTo($('.section-people .left'));
+        }
+    };
     Drupal.behaviors.bentoSearch = {
         attach: function attach(context, settings) {
 
