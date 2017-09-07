@@ -42,7 +42,61 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 		</div>
 
 	</header>
+<!--++++++++++++++tabs+++++++++++++++++++++ -->
+
+<!--______________________messages_____________________________-->
+<div class="l-messages">
+    <?php print render($page['highlighted']); ?>
+    <?php //print $messages; ?>
+    <?php print render($page['help']); ?>
+</div>
+<!--______________________content_____________________________-->
+
+<div class="l-main">
+    <div class="l-content " role="main">
+<?php  //dpm($tabs); ?>
+<?php if ($tabs): ?>
+ <section class="admin-tabs">
+
+	 <?php print render($tabs); ?>
+ </section>
+<?php endif; ?>
+        <div class="content">
+            <?php print $breadcrumb; ?>
+            <a id="main-content"></a>
+            <?php print render($title_prefix); ?>
+            <?php if ($title): ?>
+            <h1><?php print $title; ?></h1>
+            <?php endif; ?>
+            <?php print render($title_suffix); ?>
+</div> 
+
+            <?php if ($action_links): ?>
+            <ul class="action-links"><?php print render($action_links); ?></ul>
+            <?php endif; ?>
+            <?php print render($page['content']); ?>
+            <?php print $feed_icons; ?>
+        </div>
+    </div>
+
+    <?php print render($page['sidebar_first']); ?>
+    <?php print render($page['sidebar_second']); ?>
+</div>
+<!--______________________sidebar-first_______________________-->
+<!--______________________sidebar-second______________________-->
+<!--______________________footer______________________________-->
+<footer class="l-footer" role="contentinfo">
+        <aside class="footer">
+    <div class="container">
+            <?php print render($page['footer']); ?>
+    </div>
+        </aside>
+    <aside class="subfooter">
+    <div class="container">
+        <?php print render($page['subfooter']); ?>
+    </div>
+    </aside>
+</footer>
 <!--______________________subfooter___________________________-->
 </div>
-
 <?php print render($page['offcanvas']); ?>

@@ -54,6 +54,13 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 
 <div class="l-main">
     <div class="l-content " role="main">
+<?php  //dpm($tabs); ?>
+<?php if ($tabs): ?>
+ <section class="admin-tabs">
+
+	 <?php print render($tabs); ?>
+ </section>
+<?php endif; ?>
         <div class="content">
             <?php print $breadcrumb; ?>
             <a id="main-content"></a>
@@ -62,12 +69,7 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
             <h1><?php print $title; ?></h1>
             <?php endif; ?>
             <?php print render($title_suffix); ?>
-<?php if ($tabs): ?>
-		  <button class="button admin-menu__button" type="button" data-toggle="admin-dropdown"></button>
-<div class="dropdown-pane admin-menu__dropdown" id="admin-dropdown" data-position="bottom" data-alignment="right"  data-dropdown data-auto-focus="true">
- <?php print render($tabs); ?>
 </div> 
-<?php endif; ?>
 
             <?php if ($action_links): ?>
             <ul class="action-links"><?php print render($action_links); ?></ul>
@@ -75,7 +77,6 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
             <?php print render($page['content']); ?>
             <?php print $feed_icons; ?>
         </div>
-    </div>
 
     <?php print render($page['sidebar_first']); ?>
     <?php print render($page['sidebar_second']); ?>
