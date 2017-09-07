@@ -26,4 +26,6 @@
  * @see template_process()
  */
 ?>
-    <?php print render($content); ?>
+    <?php //print render($content); ?>
+
+<a href="<?php print $content['field_button'][0]['#element']['url']; ?>" class="button" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="<?php print $content['field_tooltip'][0]['#markup']; ?>" data-position="top" data-alignment="center"><?php print $content['field_button'][0]['#element']['title']; ?></a>

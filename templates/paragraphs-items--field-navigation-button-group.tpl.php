@@ -25,7 +25,7 @@
  */
 ?>
 
-  <div class="expanded button-group success">
+  <div class="stacked-for-small expanded button-group success">
   	<?php
   	  print $content;
   	?>

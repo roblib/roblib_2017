@@ -11,15 +11,14 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 	<header class="l-header" role="banner">
 		<div id="upei-topbar" class="top-bar">
 
+<!-- ################## left ###################### -->
+
 			<div class="top-left">
 				<ul class="branding menu">
 				<li>
 				<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
-					<img class="site-logo" src="/sites/all/themes/roblib_2017/dist/assets/img/logo.svg">
+					<img class="site-logo" src="/<?php print $theme_path ?>/dist/assets/img/logo.svg">
 				</a>
-					<!--<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">-->
-						<!--<img class="site-logo" src="<?php print $logo ?>">-->
-					<!--</a>-->
 				</li>
 				<li>
 					<span class="site-name">
@@ -28,14 +27,19 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 				</li>
 				</ul>
 			</div>
+
+
+<!-- ################## center ####################### -->
 			<div class="top-center">
 				<?php print render($page['menu_bar_center']); ?>
 			</div>
+<!-- ################## right ####################### -->
 			<div class="top-right">
-				<?php print views_embed_view('current_library_hours', 'block'); ?>
-					<button type="button" class="button" data-toggle="offCanvas">Open Menu</button>
+				 <?php print views_embed_view('current_library_hours', 'block'); ?>
+					<button type="button" class="button" data-toggle="offCanvas">Menu</button>
 			</div>
 
+<!-- ################## end  ####################### -->
 		</div>
 
 	</header>
