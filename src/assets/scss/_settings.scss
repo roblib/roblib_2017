@@ -149,9 +149,9 @@ $header-styles: (
   ),
   medium: (
     //'h1': ('font-size': 48),
-    'h1': ('font-size': 40),
-    'h2': ('font-size': 31),
-    'h3': ('font-size': 25),
+    'h1': ('font-size': 37.897),
+    'h2': ('font-size': 28.43),
+    'h3': ('font-size': 21.328),
     'h4': ('font-size': 20),
     'h5': ('font-size': 16),
   ),
@@ -279,7 +279,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // 11. Button
 // ----------
 
-$button-font-family: inherit;
+$button-font-family: $roboto-condensed;
 $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;

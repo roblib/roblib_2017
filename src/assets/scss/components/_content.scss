@@ -7,4 +7,11 @@
         margin-bottom: $global-margin;
     }
 }
+//course reserves page 
+.item-list-programs {
+}
+.item-list-programs h3 ul {
+        list-style: none;
 
+    @extend .no-bullet;
+}

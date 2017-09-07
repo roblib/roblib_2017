@@ -1,5 +1,13 @@
 (function ($) {
 
+    Drupal.behaviors.peoplepages = {
+        attach: function (context, settings) {
+
+            $('.section-people #block-views-subject-guides-block-1').appendTo($('.section-people .left'));
+
+
+        }
+    };
     Drupal.behaviors.bentoSearch = {
         attach: function (context, settings) {
 
