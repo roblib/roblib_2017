@@ -21,8 +21,6 @@
         }
 
     }
-    @at-root {
-    }
 }
 .admin-menu__button {
     position: absolute;
@@ -37,4 +35,31 @@
 }
 .searchtabs .admin-menu__container {
     float: right;
+}
+.admin-tabs ul {
+    @include tabs-container;
+    background:none;
+    margin-left: $global-margin;
+    border-bottom: $white;
+    //transform: translate(10px);
+    li {
+        @include tabs-title;
+        margin-right:$global-margin/2;
+        > a {
+            border-radius: $global-radius $global-radius 0 0;
+            background:#fbfbfb;
+            border: 1px solid #ccc;
+            border-bottom:0px;
+            padding: rem-calc(5) rem-calc(10) ;
+            font-family: $roboto-condensed;
+            text-transform: uppercase;
+            font-size: rem-calc(14);
+            &:hover {
+                background:$red;
+                color:$white;
+
+            }
+        }
+
+    }
 }
