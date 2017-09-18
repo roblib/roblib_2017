@@ -57,7 +57,20 @@
 //################### sstructure ######################
 
 .top-bar { 
-    $top-bar-breakpoint: 1200px;
+    $logo-calendar-width: 240px;
+    $top-bar-breakpoint: 1024px;
+    .branding {
+        @include breakpoint($top-bar-breakpoint){
+            .site-name {
+                display:none;
+            }
+        }
+        @include breakpoint(1200px){
+            .site-name {
+                display:initial;
+            }
+        }
+    }
     .view-current-library-hours {
         display: none;
         @include breakpoint($top-bar-breakpoint) {
@@ -72,15 +85,18 @@
     }
     .top-center {
 
-            display:none;
+        display:none;
         @include breakpoint($top-bar-breakpoint) {
             display: initial;
         }
     }
-}
-.top-left, .top-right {
-    @include breakpoint(medium) {
-        width: 240px;
+    .top-left, .top-right {
+        @include breakpoint(large) {
+            width:175px; 
+        }
+        @include breakpoint(1200px) {
+            width: $logo-calendar-width;
+        }
     }
 }
 //.top-bar-center {
@@ -88,8 +104,13 @@
 //}
 
 .sub {
+    transform: translateX(-142px);
+    width: 900px;
+    @include breakpoint(1200px) {
+
         width: 1170px;
-    transform: translateX(-276px);
+        transform: translateX(-276px);
+    }
 }
 
 //#########################################
