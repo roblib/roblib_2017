@@ -11,5 +11,8 @@ function roblib_2017_field__field_proxied_link__database($variables) {
 	
 	return $output;
 }
-
+function roblib_2017_css_alter(&$css) {
+ // unset($css[drupal_get_path('module', 'room_reservations') . '/room_reservations.css']);
+  unset($css[drupal_get_path('theme', 'omega') . '/omega/css/modules/system/system.messages.theme.css']);
+}
 

@@ -103,14 +103,14 @@
       hide($content['links']);
       hide($content['field_picture']);
     ?>
-<div class="media-object">
-  <div class="media-object-section">
+<div class="people-content">
+  <div class="left">
     <div class="thumbnail">
 
       <?php print render($content['field_picture']); ?>
     </div>
   </div>
-  <div class="media-object-section">
+  <div class="right">
       <?php print render($content); ?>
   </div>
 </div>

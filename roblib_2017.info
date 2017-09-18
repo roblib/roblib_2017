@@ -22,6 +22,8 @@ scripts[] = dist/assets/js/app.js
 ; FOAD
 ; ========================================
 stylesheets[all][] = system.menus.theme.css
+stylesheets[all][] = system.theme.css
+stylesheets[all][] = system.messages.theme.css
 
 ; ========================================
 ; Regions
