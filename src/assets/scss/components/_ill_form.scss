@@ -16,9 +16,10 @@ form {
 
         }
 
+    }
+
         .description {
             @extend .help-text;
             margin-bottom:$global-margin;
         }
-    }
 }
