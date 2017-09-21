@@ -18,8 +18,14 @@ form {
 
     }
 
-        .description {
-            @extend .help-text;
-            margin-bottom:$global-margin;
-        }
+    .description {
+        @extend .help-text;
+        margin-bottom:$global-margin;
+    }
+    .grippie {
+        display:none;
+    }
+    .form-textarea-wrapper textarea {
+        margin: 0 0 1rem;
+    }
 }
