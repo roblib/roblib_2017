@@ -61,6 +61,13 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 	 <?php print render($tabs); ?>
  </section>
 <?php endif; ?>
+
+<h1>
+testing
+</h1>
+
+
+
         <div class="content">
             <?php print $breadcrumb; ?>
             <a id="main-content"></a>
@@ -69,7 +76,7 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
             <h1><?php print $title; ?></h1>
             <?php endif; ?>
             <?php print render($title_suffix); ?>
-</div> 
+</div>
 
             <?php if ($action_links): ?>
             <ul class="action-links"><?php print render($action_links); ?></ul>
