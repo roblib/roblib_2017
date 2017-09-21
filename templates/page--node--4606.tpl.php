@@ -61,6 +61,13 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 	 <?php print render($tabs); ?>
  </section>
 <?php endif; ?>
+
+<h1>
+testing
+</h1>
+
+
+
         <div class="content">
             <?php print $breadcrumb; ?>
             <a id="main-content"></a>
@@ -69,51 +76,6 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
             <h1><?php print $title; ?></h1>
             <?php endif; ?>
             <?php print render($title_suffix); ?>
-
-			<div class="input-group">
-				  <span class="input-group-label">$</span>
-				    <input class="input-group-field" type="number">
-					  <div class="input-group-button">
-						      <input type="submit" class="button" value="Submit">
-							    </div>
-							</div>
-
-			<div class="inline-search select">
-				<form action="https://www.google.com/cse" id="searchbox_007843865286850066037:3ajwn2jlweq" name="googlecse">
-					<select id="cx" name="cx" title="limit to geographic area">
-						<option selected="selected" value="007843865286850066037:3ajwn2jlweq">Canada</option>
-						<option value="007843865286850066037:4-bnftxu7fu">United States</option>
-						<option value="001264040667983660617:sdpga_b-la0">Mexico</option>
-						<option value="000020642661290884311:t1v1wsrhx8o">Africa</option>
-						<option value="007843865286850066037:dq6qjj8woo8">Asia and Pacific</option>
-						<option value="003955898386883698851:cwkdymvp0em">Caribbean and Latin America</option>
-						<option value="001264040667983660617:6fr15756uka">Europe</option>
-						<option value="003955898386883698851:ethbsqpb_pq">Middle East</option>
-						<option value="007843865286850066037:b0heuatvay8">Intergovernmental Organizations</option> 
-					</select> 
-
-					<input class="searcharg" name="q" size="55" title="search government resources" type="text" /> 
-					<div class="input-group-button">
-						<input name="sa" type="submit" value="Go" /> 
-					</div>
-				</form>
-					<script type="text/javascript" src="https://www.google.com/coop/cse/brand?form=searchbox_007843865286850066037:3ajwn2jlweq"></script>
-			</div>
-
-
-			<div class="inline-search">
-	Search just PEI Provincial and Municipal Web Sites:<br />
-			<form action="http://www.google.com/cse" id="cse-search-box">
-<input name="q" size="31" type="text" />
-				<input name="cx" type="hidden" value="008210323573844390504:tgghgzjnoci" /> 
-				<input name="ie" type="hidden" value="UTF-8" /> 						 
-				<div class="input-group-button">
-					<input name="sa" type="submit" value="Search" /><br />
-				</div>
-			</form>
-			(powered by Google, maintained by UPEI Library Staff)
-			</div>
-</div> 
 
             <?php if ($action_links): ?>
             <ul class="action-links"><?php print render($action_links); ?></ul>

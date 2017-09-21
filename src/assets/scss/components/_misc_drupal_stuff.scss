@@ -109,7 +109,32 @@ a#edit-cancel {
         //@include progress-meter-text;
     }
 }
+.inline-search {
+    form {
+        @extend .input-group;
 
+    }
+    select {
+
+
+        width: auto;
+        border: 1px solid #C0C0C0;
+        background-color: #E0E0E0;
+        height: 40px;
+
+
+    }
+    input[type="text"] {
+        @extend .input-group-field;
+    height:rem-calc(40) !important;
+        //display: none;
+    }
+    input[type="submit"] {
+        //display: none;
+        border-radius: 0 $global-radius $global-radius 0;
+        //@extend .input-group-button;
+    }
+}
 //progress-meter
 //@include progress-meter;
 //Adds styles for the inner meter of a progress bar.
