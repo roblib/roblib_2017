@@ -70,6 +70,7 @@
         @extend .input-group-field;
         //@include button();
         border-radius: $global-radius 0 0 $global-radius;
+        background:#fff;
     }
     .tabs-panel {
         @include padding(1,0,0,0);
