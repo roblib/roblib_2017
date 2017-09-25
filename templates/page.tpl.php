@@ -66,7 +66,7 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
             <a id="main-content"></a>
             <?php print render($title_prefix); ?>
             <?php if ($title): ?>
-            <h1><?php print $title; ?></h1>
+            <h1 class="page_title"><?php print $title; ?></h1>
             <?php endif; ?>
             <?php print render($title_suffix); ?>
             <?php if ($action_links): ?>
