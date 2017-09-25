@@ -138,10 +138,10 @@ function images() {
 // Start a server with BrowserSync to preview the site in
 function server(done) {
     browser.init({
-        //server: PATHS.dist, port: PORT
-        proxy         : PROXY,
-        port          : PORT,
-        injectChanges : true
+        server: PATHS.dist, port: PORT
+        //proxy         : PROXY,
+        //port          : PORT,
+        //injectChanges : true
     });
     done();
 }

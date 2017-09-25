@@ -135,9 +135,10 @@ a#edit-cancel {
         //@extend .input-group-button;
     }
 }
-//progress-meter
-//@include progress-meter;
-//Adds styles for the inner meter of a progress bar.
+//page title icons 
+h1 i.fa {
+    color:$red;
+    margin-right: $global-margin/2;
+}
 
-//progress-meter-text
-//@include progress-meter-text;
+

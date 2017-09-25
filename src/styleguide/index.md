@@ -1,3 +1,48 @@
+# Common Components
+
+<p class="lead">use these code snippets in the ckeditor to create these components</p>
+
+---
+
+## Search box
+
+<div class="input-group">
+  <span class="input-group-label">$</span>
+  <input class="input-group-field" type="number">
+  <div class="input-group-button">
+    <input type="submit" class="button" value="Submit">
+  </div>
+</div>
+
+```html
+<div class="input-group">
+  <span class="input-group-label">$</span>
+  <input class="input-group-field" type="text">
+  <div class="input-group-button">
+    <input type="submit" class="button" value="Submit">
+  </div>
+</div>
+```
+---
+
+## Smooth Scrolling
+
+Allows internal links smooth scrolling.
+
+```html
+<ul class="menu" data-smooth-scroll>
+  <li><a href="#first">First Arrival</a></li>
+  <li><a href="#second">Second Arrival</a></li>
+  <li><a href="#third">Third Arrival</a></li>
+</ul>
+<div class="sections">
+  <section id="first">First Section</section>
+  <section id="second">Second Section</section>
+  <section id="third">Third Section</section>
+</div>
+```
+---
+
 # The Grid
 
 <p class="lead">Problem: You've got tons of content, each needing different sized vertical columns, and don't know how to quick and easily get it all done. Solution: The awesome grid!</p>
