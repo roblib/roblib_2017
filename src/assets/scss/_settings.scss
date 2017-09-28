@@ -79,6 +79,7 @@ $light-gray: #E0E0E0;
 $medium-gray: #C0C0C0;
 $dark-gray: #A0A0A0;
 $black: #333;
+$gray-green: mix(#767676, #5b8c1f, 60%);
 $green: #5B8C1F;
 $red: #8C2004;
 $white: #fefefe;
@@ -91,7 +92,7 @@ $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 6px;
+$global-radius: 4px;
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
@@ -134,7 +135,7 @@ $block-grid-max: 8;
 $header-font-family: $lusitana;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
-$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+$font-family-monospace: consolas, 'liberation mono', courier, monospace;
 $header-color: inherit;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
@@ -149,19 +150,20 @@ $header-styles: (
   ),
   medium: (
     //'h1': ('font-size': 48),
-    'h1': ('font-size': 37.897),
+    //'h1': ('font-size': 37.897),
+    'h1': ('font-size': 32),
     'h2': ('font-size': 28.43),
     'h3': ('font-size': 21.328),
     'h4': ('font-size': 20),
     'h5': ('font-size': 16),
   ),
 );
-$header-text-rendering: optimizeLegibility;
+$header-text-rendering: optimizelegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
-$paragraph-text-rendering: optimizeLegibility;
+$paragraph-text-rendering: optimizelegibility;
 $code-color: $black;
 $code-font-family: $font-family-monospace;
 $code-font-weight: $global-weight-normal;
@@ -225,7 +227,7 @@ $input-error-font-weight: $global-weight-bold;
 
 $accordion-background: $white;
 $accordion-plusminus: true;
-$accordion-title-font-size: rem-calc(12);
+$accordion-title-font-size: rem-calc(16);
 $accordion-item-color: $primary-color;
 $accordion-item-background-hover: $light-gray;
 $accordion-item-padding: 1.25rem 1rem;
