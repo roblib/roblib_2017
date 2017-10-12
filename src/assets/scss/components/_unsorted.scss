@@ -91,3 +91,22 @@ h3 {
 
     }
 }
+
+.searchform #search_qtype_label {
+    //display: none;
+    @extend .input-group;
+    select {
+        width: rem-calc(100);
+    }
+    input [type="search"] {
+        border-radius: 0px;
+    } 
+input#search {
+    border-radius: 0px;
+    background: #fff;
+}
+
+input.searchbutton {
+    border-radius: 0 3px 3px 0;
+}
+}

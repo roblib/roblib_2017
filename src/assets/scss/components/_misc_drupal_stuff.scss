@@ -109,7 +109,18 @@ a#edit-cancel {
         //@include progress-meter-text;
     }
 }
-
+.tb-megamenu select, .tb-megamenu textarea, .tb-megamenu input[type="text"], .tb-megamenu input[type="password"], .tb-megamenu input[type="datetime"], .tb-megamenu input[type="datetime-local"], .tb-megamenu input[type="date"], .tb-megamenu input[type="month"], .tb-megamenu input[type="time"], .tb-megamenu input[type="week"], .tb-megamenu input[type="number"], .tb-megamenu input[type="email"], .tb-megamenu input[type="url"], .tb-megamenu input[type="search"], .tb-megamenu input[type="tel"], .tb-megamenu input[type="color"], .tb-megamenu .uneditable-input {
+    display: inline-block;
+    height: inherit;
+    padding: initial;
+    margin-bottom: initial;
+    font-size: initial;
+    line-height: initial;
+    color: #555;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
 form.input-group {
     max-height: 40px;
 }
