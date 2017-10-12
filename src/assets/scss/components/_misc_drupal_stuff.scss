@@ -109,6 +109,10 @@ a#edit-cancel {
         //@include progress-meter-text;
     }
 }
+
+form.input-group {
+    max-height: 40px;
+}
 .inline-search {
     form {
         @extend .input-group;
@@ -126,7 +130,7 @@ a#edit-cancel {
     }
     input[type="text"] {
         @extend .input-group-field;
-    height:rem-calc(40) !important;
+        height:rem-calc(40) !important;
         //display: none;
     }
     input[type="submit"] {
