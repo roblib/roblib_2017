@@ -8,8 +8,10 @@
 }
 .l-messages { //no sidebars / mobile display
     @include flex-grid-row();
-    padding: $global-padding;
-    .messages {
+    //padding: $global-padding;
+    margin-top:$global-margin*1;
+    .messages,
+    .l-region--highlighted {
         @include flex-grid-column(12);
     }
 }
