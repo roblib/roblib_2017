@@ -110,3 +110,14 @@ input.searchbutton {
     border-radius: 0 3px 3px 0;
 }
 }
+a {
+    text-decoration: underline;
+}
+.tabs a,
+.nav a,
+#roblib-search-results a,
+a.button,
+.news-grid__link,
+a.subject_librarian__link {
+        text-decoration:none;
+}

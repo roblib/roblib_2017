@@ -129,15 +129,15 @@
 .roblib-search-row:last-child {
     border-bottom: 0;
 }
-.pane-roblib-search-solr-site {
     .roblib-search-row {
-        padding: 4px 8px;
-        display:flex;
+        padding: $global-padding/2;
+        //display:flex;
         transition: all .3s ease;
         &:hover {
             background: darken($white, 10%);
         }
     }
+.pane-roblib-search-solr-site {
     .solr-site-results {
         white-space: initial;
         overflow: initial;
