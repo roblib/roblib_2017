@@ -121,3 +121,40 @@ a.button,
 a.subject_librarian__link {
         text-decoration:none;
 }
+
+.academic-integrity-menu {
+li.tb-megamenu-item.level-1.mega.dropdown.active.active-trail {
+    width: 270px;
+}
+.tb-megamenu .mega > .mega-dropdown-menu {
+    min-width: 270px;
+}
+    .tb-megamenu {
+        background:none;
+    }
+    //display:none;
+    &.block {
+        background:none;
+    }
+    .level-1 > .dropdown-menu {
+        display: block;
+    }
+    .block,
+    .block__content {
+        background:none;
+        padding:0 !important;
+        margin:0;
+    }
+    .tb-megamenu .nav li.dropdown.active > .dropdown-toggle {
+        font-size:1rem;
+        padding-right:20px;
+    }
+    .caret {
+        display:none !important;
+    }
+}
+.l-main aside > .academic-integrity-menu.block {
+    //display:none;
+    background:none;
+    border:none;
+}
