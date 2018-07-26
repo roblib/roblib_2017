@@ -1,24 +1,42 @@
 //@format
 
+//layout
+.event {
+    @include xy-grid;
+}
+.event_info_left {
+    @include xy-cell(10%);
+    margin-left: 0px;
+}
+.event_info_right {
+    @include xy-cell(90%);
+}
+.event_thumbnail {
+    float: left;
+    margin-right: $global-margin/2;
+    width: 100px;
+}
 .event {
     //display: none;
-    @include clearfix;
+    //@include clearfix;
 }
 .event_date {
     &_wrapper {
         text-align: center;
         border: 1px solid $medium-gray;
         background: $white;
-        float: left;
-        padding: $global-padding/2;
-        margin-right: $global-margin;
+        //float: left;
+        //padding: $global-padding/2;
+        //margin-right: $global-margin;
         line-height: 1.2;
+        border-radius: $global-radius;
     }
     &_month {
         font-size: 0.8rem;
     }
     &_dom {
         font-size: 1.5rem;
+        //font-weight: bold;
     }
     &_dow {
         font-size: 0.8rem;
