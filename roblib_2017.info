@@ -10,7 +10,7 @@ core = 7.x
 ; ========================================
 ;stylesheets[all][] = css/roblib-2017.reset.css
 ;stylesheets[all][] = css/roblib-2017.styles.css
-stylesheets[all][] = dist/assets/css/app.css
+;stylesheets[all][] = dist/assets/css/app.css
 
 ; ========================================
 ; Scripts
@@ -24,6 +24,7 @@ scripts[] = dist/assets/js/app.js
 stylesheets[all][] = system.menus.theme.css
 stylesheets[all][] = system.theme.css
 stylesheets[all][] = system.messages.theme.css
+stylesheets[all][] = datepicker.1.7.css
 
 ; ========================================
 ; Regions

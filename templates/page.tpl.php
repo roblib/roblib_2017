@@ -15,7 +15,7 @@ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 			<div class="top-left">
 				<ul class="branding menu">
 				<li>
-				<a href="//www.upei.ca" title="UPEI Home" rel="home">
+				<a href="http://www.upei.ca" title="UPEI Home" rel="home">
 					<img class="site-logo" src="/<?php print $theme_path ?>/dist/assets/img/logo.svg">
 				</a>
 				</li>
