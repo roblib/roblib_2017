@@ -4,6 +4,9 @@
 .event {
     @include xy-grid;
 }
+.event_title a {
+    text-decoration: none;
+}
 .event_info_left {
     @include xy-cell(10%);
     margin-left: 0px;
@@ -15,15 +18,36 @@
     float: left;
     margin-right: $global-margin/2;
     width: 100px;
+    img {
+        border: 1px solid $light-gray;
+        padding: 4px;
+    }
 }
 .event {
     //display: none;
     //@include clearfix;
+    ul.pager {
+        text-align: center;
+    }
+
+    .view-footer {
+        text-align: center;
+    }
 }
+.event_body {
+    font-size: 0.9rem;
+    font-family: $roboto-condensed;
+}
+.event_date_long {
+    font-size: 0.9rem;
+    font-family: $roboto-condensed;
+    font-weight: 600;
+}
+
 .event_date {
     &_wrapper {
         text-align: center;
-        border: 1px solid $medium-gray;
+        border: 1px solid #ddd;
         background: $white;
         //float: left;
         //padding: $global-padding/2;
@@ -44,13 +68,61 @@
 }
 #ui-datepicker-div {
     font-size: 100%;
-    font-family: Verdana, sans-serif;
+    font-family: $roboto !important;
     background: #eee;
     border-right: 2px #666 solid;
     border-bottom: 2px #666 solid;
     z-index: 9999;
 }
 
+.links {
+    @include menu-base;
+}
+.links li {
+    border: 1px solid $green;
+    border-right: 0px;
+    &:first-child {
+        //border: 0px;
+        border-radius: 4px 0 0 4px;
+        //border-left: 1px;
+    }
+    &:last-child {
+        //border: 0px;
+        border-right: 1px solid $green;
+        border-radius: 0px 4px 4px 0px;
+    }
+    //margin-right: 4px;
+    a {
+        color: $green;
+    }
+    margin-bottom: 1rem;
+    .active {
+        background: $green;
+        color: #fff;
+    }
+}
+.library-events {
+    .columns:first-child {
+        padding-left: 0;
+    }
+    .views-row {
+        @include callout;
+        background: #f5f4f4;
+        border-color: $light-gray;
+    }
+    .views-field-title {
+        @extend h3;
+    }
+}
+.date-picker {
+    margin-top: $global-margin*3;
+    font-family: $roboto;
+    .ui-widget,
+    .ui-widget select {
+        font-family: $roboto;
+        font-size: 1rem;
+    }
+}
 /* Datepicker
 ----------------------------------*/
 .ui-datepicker {
@@ -231,44 +303,6 @@
     border-left-width: 1px;
 }
 
-.links {
-    @include menu-base;
-}
-.links li {
-    border: 1px solid $green;
-    border-right: 0px;
-    &:first-child {
-        //border: 0px;
-        border-radius: 4px 0 0 4px;
-        //border-left: 1px;
-    }
-    &:last-child {
-        //border: 0px;
-        border-right: 1px solid $green;
-        border-radius: 0px 4px 4px 0px;
-    }
-    //margin-right: 4px;
-    a {
-        color: $green;
-    }
-    margin-bottom: 1rem;
-    .active {
-        background: $green;
-        color: #fff;
-    }
-}
-.library-events {
-    .columns:first-child {
-        padding-left: 0;
-    }
-    .views-row {
-        @include callout;
-        background: $light-gray;
-    }
-    .views-field-title {
-        @extend h3;
-    }
-}
 .date-picker {
     label {
         display: none;
