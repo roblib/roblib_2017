@@ -123,6 +123,11 @@
         font-size: 1rem;
     }
 }
+.link--past-events,
+.link--past-exhibits {
+    @include button;
+    //@include button-hollow;
+}
 /* Datepicker
 ----------------------------------*/
 .ui-datepicker {
