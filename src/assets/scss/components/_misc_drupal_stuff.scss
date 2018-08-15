@@ -1,3 +1,19 @@
+
+.book-navigation .menu {
+    display: block;
+    list-style: initial;
+    margin: initial;
+    padding: initial;
+    margin-left: 1rem!important ;
+    margin-bottom:1rem!important;
+    a {
+        margin:0;
+        padding:0;
+        text-decoration:underline;
+    }
+}
+
+
 //blocks
 .l-main aside > .block,
 .section-people .content .block {
