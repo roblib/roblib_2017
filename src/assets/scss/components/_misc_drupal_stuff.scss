@@ -1,4 +1,13 @@
-
+form#scholarbounce input {
+    width: initial;
+    display: initial;
+    margin: 0;
+    line-height: 1;
+}
+form#scholarbounce {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 .book-navigation .menu {
     display: block;
     list-style: initial;
