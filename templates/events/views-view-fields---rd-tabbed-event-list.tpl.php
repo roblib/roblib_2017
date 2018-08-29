@@ -26,7 +26,6 @@
 //dpm(get_defined_vars());
 ?>
 
-<a href="blah" class="">
 	<div class="event_info_left">
 		<div class="event_date_wrapper">
 			<span class="event_date_month">
@@ -59,5 +58,3 @@
 			</div>-->
 		</div>
 	</div>
-</a>
-			<?php print $fields['view_node']->raw; ?>
