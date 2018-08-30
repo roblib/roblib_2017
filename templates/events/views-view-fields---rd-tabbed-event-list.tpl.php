@@ -23,34 +23,38 @@
  *
  * @ingroup views_templates
  */
+//dpm(get_defined_vars());
 ?>
 
-<div class="event_info_left">
-	<div class="event_date_wrapper">
-		<span class="event_date_month">
-			<?php print $fields['field_event_date_1']->content; ?>
-		</span>
-		<span class="event_date_dom">
-			<?php print $fields['field_event_date_2']->content; ?>
-		</span>
-		<span class="event_date_dow">
-			<?php print $fields['field_event_date_3']->content; ?>
-		</span>
-	</div>
-</div>
-<div class="event_info_right">
-		<h3 class="event_title">
-			<?php print $fields['title']->content; ?>
-		</h3>
-	<div class="event_thumbnail">
-		<?php print $fields['field_image']->content; ?>
-	</div>
-	<div class="event_details">
-		<div class="event_date_long">
-			<?php print $fields['field_event_date']->content; ?>
-		</div>
-		<div class="event_category">
-			<?php print $fields['field_event_type']->content; ?>
+	<div class="event_info_left">
+		<div class="event_date_wrapper">
+			<span class="event_date_month">
+				<?php print $fields['field_event_date_1']->content; ?>
+			</span>
+			<span class="event_date_dom">
+				<?php print $fields['field_event_date_2']->content; ?>
+			</span>
+			<span class="event_date_dow">
+				<?php print $fields['field_event_date_3']->content; ?>
+			</span>
 		</div>
 	</div>
-</div>
+	<div class="event_info_right">
+			<h3 class="event_title">
+				<?php print $fields['title']->content; ?>
+			</h3>
+		<div class="event_thumbnail">
+			<?php print $fields['field_image']->content; ?>
+		</div>
+		<div class="event_details">
+			<div class="event_body">
+				<?php print $fields['body']->content; ?>
+			</div>
+			<div class="event_date_long">
+				<?php print $fields['field_event_date']->content; ?>
+			</div>
+	<!--		<div class="event_category">
+				<?php print $fields['field_event_type']->content; ?>
+			</div>-->
+		</div>
+	</div>
