@@ -27,8 +27,8 @@
  * @ingroup views_templates
  */
 ?>
-<div class="row <?php print $classes; ?>">
-  <div class="columns small-8">
+<div class="events_wrapper row <?php print $classes; ?>">
+  <div class="events_list columns small-8">
 <?php print theme('links', array('links' => menu_navigation_links('menu-events'))); ?>
 	  <?php print render($title_prefix); ?>
 	  <?php if ($title): ?>
@@ -85,7 +85,7 @@
 	  <?php endif; ?>
   </div>
 
-  <div class="columns small-4">
+  <div class="date-picker_wrapper columns small-4">
 	  <?php if ($exposed): ?>
 		<div class="date-picker view-filters">
 		  <?php print $exposed; ?>
