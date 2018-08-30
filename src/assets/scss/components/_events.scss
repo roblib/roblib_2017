@@ -113,6 +113,12 @@
     .views-field-title {
         @extend h3;
     }
+    &.all .links {
+        display: none;
+    }
+}
+.nested-view .links {
+    display: none;
 }
 .date-picker {
     margin-top: $global-margin*3;
@@ -128,6 +134,33 @@
     @include button;
     //@include button-hollow;
 }
+//new layout
+.events_wrapper {
+    @include grid-row;
+}
+.events_list {
+    @include breakpoint(large) {
+        @include grid-column(8);
+    }
+}
+.date-picker_wrapper {
+    @include breakpoint(large) {
+        @include grid-column(4);
+    }
+}
+.events_wrapper.nested-view {
+    .events_list {
+        @include breakpoint(large) {
+            @include grid-column(12);
+        }
+    }
+    .date-picker_wrapper {
+        @include breakpoint(large) {
+            @include grid-column(12);
+        }
+    }
+}
+
 /* Datepicker
 ----------------------------------*/
 .ui-datepicker {
