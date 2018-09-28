@@ -158,3 +158,18 @@ li.tb-megamenu-item.level-1.mega.dropdown.active.active-trail {
     background:none;
     border:none;
 }
+//full width block
+.node-type-page-full-width-block {
+    .field--name-field-full-browser-width {
+        display: none;
+    }
+    .full-width {
+        .field--name-body {
+            display:none;
+        }
+            .field--name-field-full-browser-width {
+        display: block;
+    }
+
+    }
+}
