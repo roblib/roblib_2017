@@ -21,7 +21,7 @@ function roblib_2017_css_alter(&$css) {
 
 function roblib_2017_form_user_login_alter(&$form, &$form_state, $form_id) {
 // add a <b><href=”login-register”>.... before the name
-  $form['name']['#prefix'] = '<div class="callout warning">This page is for library staff only. If you are seeking access to Robertson Library&#39s online resources (databases, articles, books, etc.) you need to log using ' . l('https://proxy.library.upei.ca','https://proxy.library.upei.ca') . '</div>';
+  $form['name']['#prefix'] = '<div class="callout warning">This page is for library staff only. If you are seeking access to Robertson Library&#39s online resources (databases, articles, books, etc.) you need to log in using ' . l('https://proxy.library.upei.ca','https://proxy.library.upei.ca') . '</div>';
 //place forgotten password link after the password field  
 };
 
