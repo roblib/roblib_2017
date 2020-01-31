@@ -85,7 +85,12 @@ function sass() {
   return gulp.src('src/assets/scss/app.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
-      includePaths: PATHS.sass
+      //includePaths: PATHS.sass
+      includePaths: [ 
+        "node_modules",
+        "node_modules/foundation-sites/scss",
+        "node_modules/motion-ui/src"
+      ]
     })
       .on('error', $.sass.logError))
     .pipe($.autoprefixer({

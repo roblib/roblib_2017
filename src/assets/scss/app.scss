@@ -2,7 +2,8 @@
 
 @import 'components/fonts';
 @import 'settings';
-@import 'foundation';
+//@import 'foundation';
+@import 'node_modules/foundation-sites/scss/foundation';
 @import 'motion-ui';
 
 @include foundation-global-styles;
