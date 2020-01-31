@@ -1,0 +1,13 @@
+div#block-tb-megamenu-book-toc-4386 {
+    z-index: 1;
+}
+.top-bar .top-center {
+    display: block !important;
+}
+.views-form input#edit-submit {
+    display: initial !important;
+}
+/*menu*/
+.tb-megamenu-nav [title="library hours"] {
+display:none !important;
+}

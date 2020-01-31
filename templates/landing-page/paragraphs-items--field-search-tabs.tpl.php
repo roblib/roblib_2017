@@ -29,8 +29,9 @@
  */
 $tab1 = $variables['element'][0]['entity']['paragraphs_item'][5];
 $tab2 = $variables['element'][1]['entity']['paragraphs_item'][11];
-$tab3 = $variables['element'][2]['entity']['paragraphs_item'][12];
-$tab4 = $variables['element'][3]['entity']['paragraphs_item'][13];
+$tab3 = $variables['element'][4]['entity']['paragraphs_item'][21];
+$tab4 = $variables['element'][2]['entity']['paragraphs_item'][12];
+$tab5 = $variables['element'][3]['entity']['paragraphs_item'][13];
 /*
  * $nolabel = [0]['#markup'];
  */
@@ -52,6 +53,9 @@ $tab4 = $variables['element'][3]['entity']['paragraphs_item'][13];
 			<li class="tabs-title"><a href="#tab4">
 <?php print render($tab4['field_title'][0]['#markup']); ?>
 </a></li>
+			<li class="tabs-title"><a href="#tab5">
+<?php print render($tab5['field_title'][0]['#markup']); ?>
+</a></li>
 		</ul>
 
         <div class="tabs-content" data-tabs-content="collapsing-tabs">
@@ -70,6 +74,10 @@ $tab4 = $variables['element'][3]['entity']['paragraphs_item'][13];
             <div class="tabs-panel" id="tab4">
 <?php print render($tab4['field_search_code'][0]['#markup']); ?>
 <?php print render($tab4['field_below_the_box_text'][0]['#markup']); ?>
+           </div>
+            <div class="tabs-panel" id="tab5">
+<?php print render($tab5['field_search_code'][0]['#markup']); ?>
+<?php print render($tab5['field_below_the_box_text'][0]['#markup']); ?>
            </div>
         </div>
     </div>
