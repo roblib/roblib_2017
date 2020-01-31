@@ -36,7 +36,7 @@
   @include flex-grid-layout(2, '.subject_librarian__container');
   @include breakpoint(840px) {
     @include flex-grid-layout(4, '.subject_librarian__container');
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 .subject_librarian {
