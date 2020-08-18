@@ -1,0 +1,25 @@
+//@format;
+.diy-grid {
+  &--block {
+    a {
+      padding: 1em;
+      @include card-container;
+      border-top: 4px solid #8c2004;
+      height: 5rem;
+    }
+  }
+  .view-content {
+    //@include flex-grid-row(null, $grid-row-width, 4, true, 2em);
+    @include xy-grid;
+    @include xy-grid-layout(4, '.diy-grid--block');
+  }
+}
+.section-lib-diy .content .page_title {
+  display: none;
+}
+.diy-admin-links {
+  float: right;
+  a {
+    margin-left: 1rem;
+  }
+}
