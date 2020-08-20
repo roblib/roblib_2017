@@ -3,28 +3,18 @@
   background: white url(../img/nav-arrow.png) no-repeat 95% 92%;
   color: gray;
   //font-size: 120%;
-  width: 130px;
+  width: 150px;
   padding: 20px;
   margin: 15px 5px;
-  max-height: 100px;
-  min-height: 100px;
+  max-height: 120px;
+  min-height: 120px;
   display: block;
-  border-top: 4px solid #6a7f10;
+  border-top: 4px solid $red;
   border-collapse: separate;
   box-shadow: 4px 4px 6px grey;
   border-bottom-right-radius: 15px;
   text-decoration: none;
-}
-.diy-guide-list .field-content a {
-  @extend %diy-card;
-}
-.related-diys {
-  .view-content .views-field-field-guide-title a {
-    @extend %diy-card;
-  }
-}
-.add-new-diy-guide {
-  text-align: right;
+  line-height: 1.3;
 }
 .diy-grid {
   &--block {
@@ -40,6 +30,28 @@
     //@include flex-grid-row(null, $grid-row-width, 4, true, 2em);
     @include xy-grid;
     @include xy-grid-layout(4, '.diy-grid--block');
+  }
+}
+.diy-sidebar-title {
+  text-align: center;
+}
+//.diy-guide-list .field-content a {
+//@extend %diy-card;
+//}
+//.related-diys {
+//.view-content .views-field-field-guide-title a {
+//@extend %diy-card;
+//}
+//}
+.bryant-content.bryant-content-region {
+  border-left: 1px solid #ccc;
+}
+.add-new-diy-guide {
+  text-align: right;
+  line-height: 1;
+  a {
+    font-size: 0.8rem;
+    text-decoration: none;
   }
 }
 .section-lib-diy .content .page_title {
