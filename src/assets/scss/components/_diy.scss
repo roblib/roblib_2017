@@ -3,7 +3,7 @@
   background: white url(../img/nav-arrow.png) no-repeat 95% 92%;
   color: gray;
   //font-size: 120%;
-  width: 150px;
+  width: 200px;
   padding: 20px;
   margin: 15px 5px;
   max-height: 120px;
@@ -29,7 +29,7 @@
   .view-content {
     //@include flex-grid-row(null, $grid-row-width, 4, true, 2em);
     @include xy-grid;
-    @include xy-grid-layout(4, '.diy-grid--block');
+    @include xy-grid-layout(3, '.diy-grid--block');
   }
 }
 .diy-sidebar-title {
