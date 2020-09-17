@@ -35,14 +35,6 @@
 .diy-sidebar-title {
   text-align: center;
 }
-//.diy-guide-list .field-content a {
-//@extend %diy-card;
-//}
-//.related-diys {
-//.view-content .views-field-field-guide-title a {
-//@extend %diy-card;
-//}
-//}
 .bryant-content.bryant-content-region {
   border-left: 1px solid #ccc;
 }
@@ -54,8 +46,15 @@
     text-decoration: none;
   }
 }
+.diy-guide-title .field__items {
+  height: 5rem;
+  display: flex;
+  .field__item {
+    align-self: flex-end;
+  }
+}
 .section-lib-diy .content .page_title {
-  display: none;
+  //display: none;
 }
 .diy-admin-links {
   float: right;
