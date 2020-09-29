@@ -1,7 +1,7 @@
 //@format;
 %diy-card {
   background: white url(../img/nav-arrow.png) no-repeat 95% 92%;
-  color: gray;
+  color: #333;
   //font-size: 120%;
   width: 200px;
   padding: 20px;
@@ -33,7 +33,7 @@
   }
 }
 .diy-sidebar-title {
-  text-align: center;
+  //text-align: center;
 }
 .bryant-content.bryant-content-region {
   border-left: 1px solid #ccc;
@@ -52,6 +52,19 @@
   .field__item {
     align-self: flex-end;
   }
+}
+.diy-category-wrapper {
+  height: 106px;
+  display: flex;
+  .diy-category-title {
+    align-self: flex-end;
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+.diy-home-title h1 {
+  line-height: 1.1;
+  height: 106px;
 }
 .section-lib-diy .content .page_title {
   //display: none;
