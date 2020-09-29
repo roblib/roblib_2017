@@ -7,7 +7,7 @@
 // Plugin definition.
 $plugin = array(
   'title' => t('DIY layout'),
-  'category' => t('Clean Markup'),
+  'category' => t('Rob Custom'),
   'icon' => 'onecol_clean.png',
   'theme' => 'diy_layout',
   'regions' => array(

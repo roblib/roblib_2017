@@ -13,7 +13,11 @@
  *   $content['middle']: The only panel in the layout.
  */
 ?>
-<section class="<?php print $panel_classes; ?>"<?php print $panel_id; ?>>
-  <?php print $content['side']; ?>
-  <?php print $content['content']; ?>
+<section class="grid-x <?php print $panel_classes; ?>"<?php print $panel_id; ?>>
+  <div class="cell medium-4 diy_side">
+	  <?php print $content['side']; ?>
+  </div>
+<div class="cell medium-8 diy_content">
+	<?php print $content['content']; ?>
+</div>
 </section>
