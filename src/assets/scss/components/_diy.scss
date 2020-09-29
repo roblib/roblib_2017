@@ -16,16 +16,73 @@
   text-decoration: none;
   line-height: 1.3;
 }
-.diy-grid {
-  &--block {
-    a {
-      @extend %diy-card;
-      //padding: 1em;
-      //@include card-container;
-      //border-top: 4px solid #8c2004;
-      //height: 5rem;
-    }
+
+$diy-header-height: 97px;
+.diy-main-title {
+  border-bottom: 1px solid #ccc !important;
+  height: $diy-header-height;
+  h1 {
+    border-bottom: none;
+    margin-bottom: 0.5rem;
   }
+}
+.home-link {
+  margin: $global-margin;
+  a {
+    @include button();
+    @include button(
+      false,
+      $button-background,
+      $button-background-hover,
+      $button-color,
+      hollow
+    );
+  }
+}
+.related-diys {
+  //background: #ccc;
+  h2 {
+    text-align: center;
+  }
+  .field-content {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.diy_content {
+  padding-left: 1rem;
+  border-left: 1px solid #ccc;
+}
+.diy-guide-title {
+  font-size: 2.4rem;
+  height: $diy-header-height;
+}
+.related-diys .diy-grid--block a {
+  @extend %diy-card;
+}
+.related-diys .attachment .diy-grid--block a {
+  @extend %diy-card;
+  @include button(
+    false,
+    $button-background,
+    $button-background-hover,
+    $button-color,
+    hollow
+  );
+}
+.diy-grid .diy-grid--block a {
+  @extend %diy-card;
+}
+.diy-grid {
+  //&--block {
+  //a {
+  //@extend %diy-card;
+  ////padding: 1em;
+  ////@include card-container;
+  ////border-top: 4px solid #8c2004;
+  ////height: 5rem;
+  //}
+  //}
   .view-content {
     //@include flex-grid-row(null, $grid-row-width, 4, true, 2em);
     @include xy-grid;
