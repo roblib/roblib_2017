@@ -37,7 +37,8 @@ $diy-layout-bp: rem-calc(636);
   }
 }
 
-$diy-header-height: 97px;
+//$diy-header-height: rem-calc(110);
+$diy-header-height: initial;
 .diy-main-title {
   border-bottom: 1px solid #ccc !important;
   @include breakpoint($diy-layout-bp) {
@@ -67,9 +68,17 @@ $diy-header-height: 97px;
   h2 {
     text-align: center;
   }
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  .item-list a {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+  }
   .field-content {
-    display: flex;
-    justify-content: space-around;
+    //display: flex;
+    //justify-content: space-around;
   }
 }
 .diy_content {
@@ -79,7 +88,7 @@ $diy-header-height: 97px;
   }
 }
 .diy-guide-title {
-  font-size: 2.4rem;
+  //font-size: 2.4rem;
   @include breakpoint($diy-layout-bp) {
     height: $diy-header-height;
   }
@@ -92,6 +101,23 @@ $diy-header-height: 97px;
 }
 .related-diys .diy-grid--block a {
   @extend %diy-card;
+}
+
+.add-new .views-row {
+  //@include button-group($child-selector, $spacing);
+  @include button-group();
+  display: flex;
+  justify-content: flex-end;
+}
+.add-new a {
+  @include button(
+    false,
+    $button-background,
+    $button-background-hover,
+    $button-color,
+    hollow
+  );
+  margin-left: 10px;
 }
 .related-diys .attachment .diy-grid--block a {
   @extend %diy-card;
@@ -147,10 +173,10 @@ $diy-header-height: 97px;
   }
 }
 .diy-guide-title .field__items {
-  height: 5rem;
-  display: flex;
+  //height: 10rem;
+  //display: flex;
   .field__item {
-    align-self: flex-end;
+    //align-self: flex-end;
   }
 }
 .diy-category-wrapper {
@@ -163,7 +189,7 @@ $diy-header-height: 97px;
 }
 .diy-home-title h1 {
   line-height: 1.1;
-  height: 106px;
+  //height: 106px;
 }
 .section-lib-diy .content .page_title {
   //display: none;
