@@ -203,3 +203,11 @@ $diy-header-height: initial;
 .panel-pane {
   border: none;
 }
+.related-diys ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+}
+.related-diys ul li a:before {
+  content: '> ';
+}
