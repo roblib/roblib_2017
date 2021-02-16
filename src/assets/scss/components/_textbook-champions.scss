@@ -1,0 +1,12 @@
+.textbook-champions--grid .view-content {
+  @include xy-grid;
+  .node--textbook-champion--teaser {
+    img {
+      width: 100%;
+      //height: 200px;
+    }
+    @include xy-cell(3);
+  }
+  & > div {
+  }
+}
