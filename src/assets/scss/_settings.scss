@@ -71,16 +71,19 @@ $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #8C2004,
   secondary: #767676,
-  success: #5B8C1F,
+  //success: #5B8C1F,
+  success: #517E1B,
   warning: #ffae00,
   alert: #cc4b37,
 );
 $light-gray: #E0E0E0;
 $medium-gray: #C0C0C0;
-$dark-gray: #A0A0A0;
+//$dark-gray: #A0A0A0;
+$dark-gray: #757575;
 $black: #333;
 $gray-green: mix(#767676, #5b8c1f, 60%);
-$green: #5B8C1F;
+//$green: #5B8C1F;
+$green: #517E1B;
 $red: #8C2004;
 $white: #fefefe;
 $body-background: $light-gray;
