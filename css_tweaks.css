@@ -1,13 +1,43 @@
 div#block-tb-megamenu-book-toc-4386 {
-    z-index: 1;
+	z-index: 1;
 }
 .top-bar .top-center {
-    display: block !important;
+	display: block !important;
 }
 .views-form input#edit-submit {
-    display: initial !important;
+	display: initial !important;
 }
 /*menu*/
 .tb-megamenu-nav [title="library hours"] {
-display:none !important;
+	display:none !important;
+}
+.field--name-field-subjects .taxonomy-term--subject a {font-size:1rem;font-family: "Roboto Condensed", sans-serif;}
+
+.field--name-field-subjects .taxonomy-term--subject h2 {margin:0;line-height: 1;}
+
+.field--name-field-subjects .field__label {
+
+	background: #333;
+	color: #fefefe;
+	padding: 5px 1rem 0;
+	margin: 0;
+	border-radius: 4px 4px 0 0;
+	border-bottom: 4px solid #517E1B;
+}
+#block-views-subject-guides-block-1 {
+	display:none;
+}
+.subject_librarian {
+	transition: all 0.5s ease;
+	padding: 1rem;
+	padding: 0.5rem;
+	width: 174px !important;
+	border: 1px solid #ddd;
+	height: 224px !important;
+	margin: 0 auto;
+	margin-bottom: 0.5rem;
+	background: #f5f4f4;
+}
+.tb-megamenu-column-inner.mega-inner {
+    width: 1170px;
 }

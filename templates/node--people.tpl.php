@@ -102,6 +102,8 @@
       hide($content['comments']);
       hide($content['links']);
       hide($content['field_picture']);
+      hide($content['field_subjects']);
+
     ?>
 <div class="people-content">
   <div class="left">
@@ -109,6 +111,7 @@
 
       <?php print render($content['field_picture']); ?>
     </div>
+      <?php print render($content['field_subjects']); ?>
   </div>
   <div class="right">
       <?php print render($content); ?>
